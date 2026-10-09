@@ -1,0 +1,27 @@
+/* Giant cover type, original Bodoni lockup. No new font / image dependency. */
+.album-wordmark{transform-origin:0 0}
+.album-wordmark::before{display:none}
+.wordmark-ink{position:absolute;inset:0;container-type:size}
+.wordmark-part{position:absolute;inset:0;display:block;font-size:0;background:currentColor;mask:url('/album/wordmark.svg') center/100% 100% no-repeat;transform-origin:50% 50%}
+.wordmark-first{clip-path:inset(0 23.6% 0 0)}
+.wordmark-last{clip-path:inset(0 0 0 76.4%)}
+.album-site .album-home [data-wordmark-source]{left:-5%;right:auto;width:110%;height:clamp(230px,26vw,370px);max-height:none;top:auto;bottom:calc(var(--wordmark-dialogue-height,166px) + 52px)}
+/* Calm behind navigation, solid toward the large character silhouette. */
+.album-home .wordmark-ink{mask-image:linear-gradient(180deg,rgb(0 0 0 / calc(.18 + var(--wordmark-landing,0)*.82)),#000 76%),linear-gradient(90deg,rgb(0 0 0 / calc(.28 + var(--wordmark-landing,0)*.72)) 26%,#000 50%);mask-composite:intersect}
+.publication-masthead .wordmark-ink{mask-image:none}
+@media(max-width:1150px) and (min-width:701px){
+ .publication-masthead{height:19svh}
+ .album-site .album-home [data-wordmark-source]{height:clamp(210px,27vw,310px)}
+}
+@media(max-width:700px){
+ .album-site .album-home [data-wordmark-source]{left:-5%;width:110%;top:clamp(185px,52vw,230px);bottom:auto;height:calc(39vw + 12px)}
+ .wordmark-part{background:none;mask:none;clip-path:none;inset:auto;line-height:.75;font-family:var(--album-serif);font-weight:500;letter-spacing:-.085em;white-space:nowrap}
+ .wordmark-first{left:0;top:4%;font-size:20cqw}
+ .wordmark-last{right:2%;bottom:6%;font-size:25.6cqw;font-style:italic}
+ .album-home .wordmark-ink{mask-image:linear-gradient(180deg,#0009,#000 75%);mask-composite:add}
+}
+/* Preserve the fade behind navigation, but give the research paper a fully
+   legible ink silhouette instead of compounding two near-transparent masks. */
+.world-research .album-home .wordmark-ink{mask-image:linear-gradient(90deg,#0002 0%,#000a 26%,#000 42%);mask-composite:add}
+@media(forced-colors:active){.wordmark-part{background:CanvasText}.album-home .wordmark-ink,.world-research .album-home .wordmark-ink{mask-image:none}}
+@media(forced-colors:active) and (max-width:700px){.wordmark-part{background:none;color:CanvasText}}

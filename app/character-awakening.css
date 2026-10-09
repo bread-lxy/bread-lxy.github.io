@@ -1,0 +1,21 @@
+/* The opening owns one isolated overlay; lobby layout remains owned by album CSS. */
+.awakening-opening{position:fixed;inset:0;z-index:2500;isolation:isolate;touch-action:none}
+.awakening-canvas{position:fixed;inset:0;width:100vw;height:100%;z-index:1001;visibility:hidden;pointer-events:none}
+.awakening-opening[data-phase=entering] .rift-still{visibility:visible}
+.awakening-opening[data-phase=entering] .rift-build,.awakening-opening[data-phase=entering] .rift-scan{visibility:hidden}
+.awakening-opening[data-inspect=true] .title-rift{opacity:0!important}
+.awakening-opening[data-inspect=true] .awakening-canvas{visibility:visible}
+.awakening-sample .rift-sample-character{filter:none}
+.awakening-sample[data-phase=entering] .rift-sample-character{visibility:hidden}
+.awakening-sample[data-character-ready=true] .rift-sample-character{visibility:visible}
+.awakening-sample .rift-sample-ui{opacity:var(--awakening-ui,0);visibility:visible;translate:none;transition:none}
+.awakening-sample[data-phase=lobby] .rift-sample-ui{opacity:1}
+.awakening-sample[data-phase=lobby] .rift-sample-character{visibility:visible}
+.awakening-sample .rift-sample-header button:focus-visible{outline:2px solid var(--hero-accent);outline-offset:3px}
+
+/* Only the reveal interval is gated. No selectors affect subsequent world previews. */
+.album-site[data-entry-phase=entering] .album-character-flight{visibility:hidden}
+.album-site[data-entry-phase=entering][data-character-ready=true] .album-character-flight{visibility:visible}
+.album-site[data-entry-phase=entering] .hero-character.hero-character-live{filter:none;transition:none}
+.album-site[data-entry-phase=entering] :is(.site-header,.hero-identity,.selector-block,.rpg-dialogue-stage,.album-foreground){opacity:var(--awakening-ui,0)}
+.album-site[data-entry-phase=entering] .album-home::after{opacity:var(--awakening-ui,0)}

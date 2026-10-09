@@ -1,0 +1,69 @@
+/* A small listening instrument, not a second hero. All styles stay local. */
+.album-site .bgm-player{--bgm-paper:#f3f0df;--bgm-muted:#b7baab;--bgm-ink:#111613;--bgm-line:#454e43;--bgm-accent:#e0ff65;position:relative;color:var(--bgm-paper);font-family:var(--album-pixel),'Yu Gothic','Meiryo',sans-serif}
+.album-site .bgm-player .bgm-trigger{color:var(--hero-paper);display:flex;flex-direction:row;gap:4px;align-items:center}
+.album-site .bgm-player .bgm-trigger i{min-height:0;margin:0;line-height:1}
+.album-site .bgm-dock{position:fixed;top:68px;right:34px;width:280px;background:var(--bgm-ink);color:var(--bgm-paper);border:1px solid var(--bgm-line);border-top:2px solid var(--bgm-accent);box-shadow:4px 4px 0 #080c0999;z-index:66;text-align:left;max-height:calc(100svh - 86px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;animation:bgm-arrive .16s ease-out}
+.album-site .bgm-dock.is-open{width:340px;max-width:360px;max-height:min(560px,calc(100svh - 260px))}
+.album-site .bgm-player button{font:16px/1.2 var(--album-pixel),'Yu Gothic','Meiryo',sans-serif;color:var(--bgm-paper);min-width:44px;min-height:44px;padding:0;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:0;white-space:normal;border-radius:0}
+.album-site .bgm-player button:hover:not(:disabled){color:var(--bgm-accent)}
+.album-site .bgm-player button:disabled{cursor:not-allowed;color:var(--bgm-muted)}
+.album-site .bgm-player :is(button,a,input):focus-visible{outline:2px solid var(--bgm-accent);outline-offset:-2px}
+.album-site .bgm-strip{display:grid;grid-template-columns:16px minmax(0,1fr) 32px;gap:6px;align-items:center;padding:4px 10px}
+.album-site .bgm-strip .bgm-summary{display:block;min-width:0;text-align:left}
+.album-site .bgm-strip .bgm-disclosure{min-width:32px;font-size:22px}
+.bgm-title{position:relative;display:block;overflow:hidden;font-size:16px;line-height:1.6;white-space:nowrap}
+.bgm-title-measure{visibility:hidden;white-space:nowrap}
+.bgm-title-reveal{position:absolute;inset:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bgm-byline{display:flex;gap:8px;align-items:center;color:var(--bgm-muted);font:12px/1.5 var(--album-pixel),'Yu Gothic',sans-serif;overflow:hidden;white-space:nowrap}
+.bgm-byline>span:last-child{font-size:10px;letter-spacing:.05em;opacity:.85}
+.album-site .bgm-strip-meta{display:flex;align-items:center;justify-content:space-between;gap:4px;padding:0 8px;border-top:1px solid #2e362e;color:var(--bgm-muted)}
+.album-site .bgm-strip-meta>button{font-size:12px;min-height:44px;color:var(--bgm-muted);white-space:nowrap}
+.bgm-compact-transport{display:flex;align-items:center}
+.album-site .bgm-compact-transport button{width:44px;min-width:44px;height:44px;color:var(--bgm-muted)}
+.album-site .bgm-compact-transport .bgm-play{color:var(--bgm-accent)}
+.bgm-status-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.bgm-compact-message{margin:0;padding:4px 12px 10px;font:12px/1.5 var(--album-sans),sans-serif;color:var(--bgm-paper)}
+.album-site .bgm-panel{padding:0 16px 14px;border-top:1px solid var(--bgm-line)}
+.bgm-panel-heading{display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.1em;color:var(--bgm-muted)}
+.album-site .bgm-panel-heading>button{font-size:24px;margin-right:-12px}
+.bgm-timeline{margin-top:14px}
+.bgm-timeline>div{display:flex;justify-content:space-between;color:var(--bgm-muted);font-size:12px;font-variant-numeric:tabular-nums}
+.bgm-player input[type=range]{appearance:none;-webkit-appearance:none;display:block;width:100%;height:24px;margin:0;background:transparent;cursor:pointer;accent-color:var(--bgm-accent);border-radius:0}
+.bgm-player input[type=range]::-webkit-slider-runnable-track{height:2px;background:#68715e}
+.bgm-player input[type=range]::-webkit-slider-thumb{appearance:none;width:8px;height:12px;margin-top:-5px;background:var(--bgm-accent);border:0;border-radius:0}
+.bgm-player input[type=range]::-moz-range-track{height:2px;background:#68715e}
+.bgm-player input[type=range]::-moz-range-thumb{width:8px;height:12px;background:var(--bgm-accent);border:0;border-radius:0}
+.bgm-player input[type=range]:disabled{opacity:.35;cursor:not-allowed}
+.bgm-volume{display:grid;grid-template-columns:36px 1fr 26px;gap:14px;align-items:center;margin-top:10px;font-size:12px;color:var(--bgm-muted)}
+.bgm-volume output{text-align:right;font-variant-numeric:tabular-nums}
+.bgm-message{font:12px/1.7 var(--album-sans),sans-serif;color:var(--bgm-muted);margin:14px 0 8px}
+.bgm-list-heading{display:flex;justify-content:space-between;gap:8px;border-top:1px solid var(--bgm-line);padding-top:16px;margin-top:16px;font-size:10px;letter-spacing:.06em;color:var(--bgm-muted)}
+.bgm-tracklist{list-style:none;padding:0;margin:8px 0 0}
+.bgm-tracklist>li{border-bottom:1px solid #2e362e;position:relative}
+.album-site .bgm-tracklist button{display:grid;grid-template-columns:24px minmax(0,1fr) 42px;gap:8px;width:100%;padding:12px 0;text-align:left;align-items:center;line-height:1.4}
+.bgm-tracklist button[aria-current=true]{color:var(--bgm-accent)}
+.bgm-track-number{font-size:12px;align-self:start;padding-top:2px}
+.bgm-tracklist strong{display:block;font-size:16px;line-height:1.55;font-weight:400;overflow-wrap:anywhere}
+.bgm-tracklist small{display:block;font-size:12px;color:var(--bgm-muted);margin-top:3px}
+.bgm-track-state{font-size:12px;text-align:right;color:var(--bgm-muted)}
+.bgm-pending-source{display:block;margin:-4px 0 10px 32px;width:fit-content;font-size:12px;text-decoration:underline;text-underline-offset:3px;color:var(--bgm-muted);padding:4px 0}
+.bgm-license{padding:0 0 14px;margin-bottom:14px;border-bottom:1px solid var(--bgm-line);font:12px/1.8 var(--album-sans),sans-serif;color:var(--bgm-muted)}
+.bgm-license strong{font-size:12px;font-weight:500;color:var(--bgm-paper)}
+.bgm-license p{margin:6px 0}
+.bgm-license>div{display:flex;flex-wrap:wrap;gap:14px}
+.bgm-license a{text-decoration:underline;text-underline-offset:3px;color:var(--bgm-paper);padding:5px 0}
+.bgm-meter{display:flex;align-items:center;justify-content:center;gap:2px;height:16px;width:16px}
+.album-site .bgm-meter i{display:block;margin:0;min-height:0;width:3px;height:12px;background:var(--bgm-accent);opacity:1;animation:bgm-meter .72s steps(3,end) infinite alternate;transform-origin:center}
+.album-site .bgm-meter i:nth-child(2){height:16px;animation-delay:-.32s}.album-site .bgm-meter i:nth-child(3){height:8px;animation-delay:-.56s}
+.album-site .bgm-meter.is-idle i{animation:none;transform:scaleY(.35);background:var(--bgm-muted)}
+@keyframes bgm-meter{from{transform:scaleY(.3)}to{transform:scaleY(1)}}
+@keyframes bgm-arrive{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+.bgm-player[data-reduced-motion=true] .bgm-dock,.bgm-player[data-reduced-motion=true] .bgm-meter i{animation:none}
+.rpg-high-contrast .bgm-dock{border-color:#fff;--bgm-paper:#fff;--bgm-muted:#ddd;--bgm-ink:#000}
+@media(max-width:700px){.album-site .bgm-player .bgm-trigger{flex-direction:column;gap:4px}.album-site .bgm-dock,.album-site .bgm-dock.is-open{top:60px;right:12px;max-width:calc(100vw - 24px);max-height:calc(100svh - 76px);width:340px}.album-site .bgm-dock:not(.is-open){width:280px}.album-site .bgm-player input[type=range]{height:32px}.album-site .bgm-strip-meta>button{min-height:36px}
+/* Reserve room above the whole composition, not only the name: the portrait,
+   selector and dialogue retain their relative positions. Once playback has
+   been requested, pausing/closing overlays doesn't collapse this space. */
+.album-site:has(.bgm-player[data-strip-visible=true]) .album-home{margin-top:96px}}
+@media(prefers-reduced-motion:reduce){.bgm-dock,.album-site .bgm-meter i{animation:none!important}}
+@media(max-width:700px){.album-site .bgm-dock.is-open{max-height:min(560px,calc(100svh - 260px))}}

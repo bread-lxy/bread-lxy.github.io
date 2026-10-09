@@ -1,0 +1,46 @@
+Experience aquatic scene v5 — source notices
+
+Fish geometry wave is adapted from WebGL Aquarium's fishVertexShader:
+https://github.com/WebGLSamples/WebGLSamples.github.io/blob/3111b53fec040b64bfb27b107f79af57ede0a618/aquarium/aquarium.html
+Copyright 2009, Google Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+* Neither the name of Google Inc. nor the names of its contributors may be
+  used to endorse or promote products derived from this software without
+  specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+Water texture-displacement method adapted from WaltGD, Cheap water shader,
+2022-09-16. Code is CC0 1.0. No images/videos from that post are used.
+https://godotshaders.com/shader/cheap-water-shader/
+https://creativecommons.org/publicdomain/zero/1.0/
+
+caustics-cc0.png is foam_mask.png by NekotoArts, explicitly CC0 in the
+2022-09-03 article Water Hotspring Breakdown. No other article art/code used.
+https://nekotoarts.github.io/blog/Polar-Water-Breakdown
+https://nekotoarts.github.io/images/Polar_Water/foam_mask.png
+
+fantail-v5.png and comet-v5.png: original outputs of built-in image_gen,
+2026-09-25. Generated for this website; no reference artwork was cropped.
+Exact generation prompts and adaptation notes: docs/research/experience-aquatic-v5.md.
+
+Renderer uses existing OGL 1.0.11 (MIT; node_modules/ogl/LICENSE).
+All source references and permissions checked 2026-09-25.

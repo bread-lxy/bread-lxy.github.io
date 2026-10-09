@@ -1,0 +1,62 @@
+/* Experience-only. No shared Publication / Research / Projects overrides. */
+.experience-tracklist{--track-paper:#edeade;--track-ink:#20271f;--track-red:#b73729;background:var(--track-paper);color:var(--track-ink);font-family:var(--album-sans);padding:34px 6.5% 0;position:relative;isolation:isolate}
+.track-resume-anchor{position:absolute;top:0;left:0;visibility:hidden}
+.track-edition{display:flex;gap:24px;align-items:center;border-bottom:1px solid #20271f;padding-bottom:18px;font:14px/1.4 var(--album-pixel)}
+.track-edition>span:nth-child(2){margin-left:auto;font-family:var(--album-sans)}
+.track-layout{display:grid;grid-template-columns:minmax(290px,.9fr) minmax(0,1.7fr);gap:clamp(45px,5.8vw,90px);align-items:start;padding-top:44px}
+.experience-index{position:sticky;top:158px;align-self:start;padding-bottom:28px;color:var(--track-ink);font:inherit;display:block}
+.track-index-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.experience-tracklist .track-index-title h2{font-size:82px;line-height:1.15;letter-spacing:-.06em}
+.experience-tracklist .experience-scroll-float{overflow:clip;padding:.08em 0}
+.experience-tracklist .experience-scroll-float-text{font:inherit;line-height:inherit;text-align:left;font-weight:850}
+.track-disc{border:1px solid var(--track-red);color:var(--track-red);width:45px;height:45px;border-radius:50%;display:grid;place-items:center;font:18px var(--album-pixel);transform:rotate(-15deg)}
+.track-index-meta{display:flex;justify-content:space-between;gap:15px;padding:0 0 23px;border-bottom:1px solid #20271f38;font:12px/1.4 var(--album-pixel)}
+.experience-tracklist .experience-line-sidebar{--accent-color:var(--track-red);--text-color:var(--track-ink);--marker-color:#666b60;--marker-length:38px;--marker-gap:9px;--font-size:1.15rem;--item-gap:10px;padding-top:14px}
+.experience-line-sidebar__list{width:100%;position:relative}
+.experience-line-sidebar__item>a{position:relative;display:flex;align-items:center;min-height:44px;width:100%;text-decoration:none}
+.experience-line-sidebar__item::before{pointer-events:none}
+.experience-line-sidebar__label{font-weight:550;white-space:nowrap}
+.experience-line-sidebar__index{font-family:var(--album-pixel)}
+.experience-line-sidebar__item[data-active=true]{--effect:1}
+.experience-line-sidebar__item>a:focus-visible{outline:2px solid var(--track-red);outline-offset:4px}
+.track-position{display:flex;align-items:center;gap:12px;border-top:1px solid #20271f38;padding-top:22px;font:12px var(--album-pixel)}
+.track-position .track-shuffle{font:32px/1 var(--album-pixel);color:var(--track-red);min-width:2ch}
+.track-position>i{margin-left:auto;width:75px;height:10px;background:repeating-linear-gradient(90deg,var(--track-red) 0 2px,transparent 2px 5px)}
+.track-mobile-current{display:none}
+.track-records{min-width:0;border-left:1px solid #20271f30;padding-left:32px}
+.track-side-title{display:flex;align-items:baseline;justify-content:space-between;gap:15px;border-bottom:3px solid var(--track-ink);padding-bottom:15px;margin-bottom:30px}
+.track-side-title>span{font:12px/1.4 var(--album-pixel)}
+.experience-tracklist .track-side-title h2{font:800 38px/1.2 var(--album-sans);margin-right:auto;letter-spacing:-.04em}
+.track-side-title .experience-scroll-float{padding:0}
+.track-unit:nth-child(3) .track-side-title{margin-top:20px}
+.track-record{position:relative;padding:0 0 44px;margin-bottom:42px;border-bottom:1px solid #20271f45;scroll-margin-top:159px}
+.track-native-anchor{position:absolute;top:0;left:0;scroll-margin-top:159px}
+.track-record::before{content:'';position:absolute;left:-38px;top:7px;width:10px;height:10px;background:var(--track-paper);border:1px solid var(--track-red);transform:rotate(45deg)}
+.track-record-meta{display:flex;align-items:center;gap:16px;font:12px/1.5 var(--album-pixel);color:#5c6257;margin-bottom:20px}
+.track-record-meta .track-number{font:28px/1 var(--album-pixel);color:var(--track-red)}
+.track-record-meta time{margin-left:auto;white-space:nowrap}
+.experience-tracklist .track-title-mask{font:750 clamp(29px,2.55vw,39px)/1.4 var(--album-sans);letter-spacing:-.045em;overflow:clip;margin:0 0 7px}
+.track-title-mask>span{display:block}
+.experience-tracklist .track-role{font:15px/1.6 var(--album-sans);margin:0 0 23px;color:#60675a}
+.experience-tracklist .liner-copy{max-width:650px;font-size:18px;line-height:1.9;letter-spacing:.015em}
+.experience-tracklist .liner-copy>p{margin:0 0 12px;text-wrap:pretty}
+.liner-related{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:24px;font-size:14px}
+.experience-tracklist .liner-related a{display:inline-flex;gap:10px;color:var(--track-red);border-bottom:1px solid #b7372966;padding:3px 0}
+.track-end{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--track-ink);padding:23px 0 28px;font:14px var(--album-pixel)}
+@media(min-width:701px) and (max-width:1100px){
+ .experience-tracklist{padding-left:4%;padding-right:4%}.track-layout{grid-template-columns:285px minmax(0,1fr);gap:34px}.track-records{padding-left:23px}.track-record::before{left:-29px}.experience-index{top:155px}.experience-tracklist .track-index-title h2{font-size:64px}.track-record-meta{flex-wrap:wrap;gap:10px}.track-record-meta>span:nth-child(2){order:3;width:100%}.track-record-meta time{font-size:12px}.experience-tracklist .liner-copy{font-size:17px}.track-side-title>span:last-child{display:none}
+}
+@media(max-width:700px){
+ .experience-tracklist{padding:24px 22px 0}.track-edition{font-size:12px;gap:10px;padding-bottom:16px}.track-edition>span:nth-child(2){display:none}.track-edition>span:last-child{margin-left:auto}
+ .track-layout{display:block;padding-top:22px}.experience-index{position:sticky;top:114px;background:var(--track-paper);z-index:5;padding:0;margin-bottom:28px}
+ .experience-tracklist .track-index-title h2{font-size:44px}.track-index-title{padding-top:8px;margin-bottom:10px}.track-disc{height:32px;width:32px;font-size:14px}.track-index-meta,.track-position{display:none}
+ .track-mobile-current{display:flex;width:100%;align-items:center;gap:13px;border:0;border-top:1px solid var(--track-ink);border-bottom:1px solid var(--track-ink);background:var(--track-ink);color:var(--track-paper)!important;padding:12px 13px;text-align:left;font-size:15px!important;min-height:52px}
+ .track-mobile-current>span{font:21px var(--album-pixel);color:#ddf637}.track-mobile-current>strong{font-weight:500}.track-mobile-current>i{margin-left:auto;font:22px var(--album-sans)}
+ .track-menu{display:none;background:var(--track-paper);padding:0 10px 0 0;border-bottom:1px solid var(--track-ink);max-height:55svh;overflow-y:auto}.track-menu[data-open=true]{display:block}.experience-tracklist .experience-line-sidebar{--font-size:1rem;--item-gap:1px;--marker-length:26px;--marker-gap:8px;padding-top:0;margin-left:3px}
+ .track-records{border:0;padding:0}.track-record::before{display:none}.track-record{scroll-margin-top:266px;padding-bottom:27px;margin-bottom:28px}.track-record-meta{gap:12px;flex-wrap:wrap;margin-bottom:15px}.track-record-meta>span:nth-child(2){order:3;width:100%;font-size:12px}.track-record-meta time{font-size:12px}.track-record-meta .track-number{font-size:25px}
+ .experience-tracklist .track-title-mask{font-size:27px;line-height:1.4;letter-spacing:-.045em}.experience-tracklist .track-role{font-size:14px;margin-bottom:18px}.experience-tracklist .liner-copy{font-size:16px;line-height:1.95}.liner-related{font-size:14px;gap:12px 20px;margin-top:20px}
+ .track-side-title{margin-bottom:18px;padding-bottom:8px;gap:12px}.experience-tracklist .track-side-title h2{font-size:24px}.track-side-title>span{font-size:12px}.track-side-title>span:last-child{display:none}.track-record-meta>span:nth-child(2){display:none}.track-end{font-size:12px;gap:15px;padding:20px 0}
+}
+@media(min-width:701px) and (max-height:800px){.experience-tracklist .track-index-title h2{font-size:56px}.experience-tracklist .experience-line-sidebar{--item-gap:3px}.track-index-meta{padding-bottom:14px}.track-position{padding-top:13px}.experience-index{top:149px}}
+@media(prefers-reduced-motion:reduce){.experience-line-sidebar__label{transform:none!important}.experience-scroll-float{overflow:visible!important}}
+@media(forced-colors:active){.experience-tracklist,.track-menu,.experience-index{background:Canvas;color:CanvasText}.track-mobile-current{background:ButtonFace;color:ButtonText!important}}

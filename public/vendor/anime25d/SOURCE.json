@@ -1,0 +1,39 @@
+{
+  "commit": "7450341934a8ff77bf05b90d9f708786e3eb3996",
+  "upstream": "https://github.com/852wa/Anime2.5DRig",
+  "kernels": {
+    "lib/app.js": [
+      [
+        18,
+        39
+      ],
+      [
+        45,
+        116
+      ],
+      [
+        662,
+        797
+      ],
+      [
+        875,
+        891
+      ],
+      [
+        894,
+        923
+      ]
+    ]
+  },
+  "extensions": {
+    "accessory-spring.js": "Independent optional exact-layer cloth-strip spring; hook before upstream body rotation. No source PSD-specific naming or coordinates."
+  },
+  "sha256": {
+    "lib/app.js": "d1e5027383378b27ddc1f80d841cef2f6a7b4c520c1816d2aaf7077c41d82800",
+    "lib/rigger.js": "2c6fb2f5c2a03d59e339412fc7da240c1a46f77ca391547f1926c79277f0d880",
+    "lib/runtime.js": "04ee16d466c2b43a124dcf0a76a8bf0b48646743cf755360de3db759c5e10aac",
+    "lib/genericparts.js": "8c9684f998348207bf82660de492f9f5899983e40953b8c9cb66999f9185aae8",
+    "lib/ag-psd.min.js": "1b74dcd2d135dc5ee3b5dca526a8a2004aa687aab979a9db47bea4af8cf0a1ca",
+    "lib/psd-worker.js": "4edd4eaac9cf26223632ae16d5d9329e7067172421162e63d9275b1588722ec0"
+  }
+}

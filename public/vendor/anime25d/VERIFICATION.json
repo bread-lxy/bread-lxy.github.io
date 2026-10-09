@@ -1,0 +1,49 @@
+{
+  "date": "2026-09-10T15:32:36.114Z",
+  "browser": "Chromium 1228 headless WebGL",
+  "result": {
+    "parts": 20,
+    "vertices": 649,
+    "strands": 11,
+    "opaque": 236217,
+    "transparent": 353607,
+    "changed": 9959,
+    "nonRigid": true,
+    "eyeDiff": 11285,
+    "dimensions": {
+      "width": 780,
+      "height": 1200
+    },
+    "glError": 0,
+    "invalidRejected": true,
+    "restored": true,
+    "renderAfterDispose": false,
+    "abortRejected": true,
+    "warnings": [],
+    "accessory": {
+      "fixedRoot": 4,
+      "movingTip": 1,
+      "untouchedExterior": 24,
+      "otherLayerChanges": 0,
+      "disabledSame": true,
+      "metadata": [
+        {
+          "layer": "cloth-ear-fixture",
+          "root": [
+            116.66666666666667,
+            62
+          ],
+          "tip": [
+            116.66666666666667,
+            226
+          ],
+          "width": 30,
+          "amplitude": 24,
+          "movingVertices": 7
+        }
+      ]
+    },
+    "missingLayerRejected": true
+  },
+  "errors": []
+}

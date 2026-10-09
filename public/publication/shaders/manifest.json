@@ -1,0 +1,65 @@
+{
+  "upstream": "https://github.com/gl-transitions/gl-transitions",
+  "commit": "902218a1b63773ac0d0d9f491951da3392365bfe",
+  "license": "MIT; each shader also explicitly declares MIT in its own file header.",
+  "author": "bread (GitHub: bread-lxy)",
+  "defaults": {
+    "Revolve_Left": {
+      "center": [
+        0.46,
+        0.52
+      ],
+      "direction": -1,
+      "maxRotation": 1.95,
+      "peakZoom": 2.22,
+      "swirl": 2.85,
+      "barrel": 0.38,
+      "motionBlur": 1,
+      "switchStart": 0.3,
+      "switchEnd": 0.5,
+      "shadow": 0.16
+    },
+    "Drop_Zone_Flicker": {
+      "frameRate": 24,
+      "rgbOffset": 0.014,
+      "blockAmount": 0.72,
+      "ghostAmount": 0.62,
+      "redCyan": 0.58,
+      "scanline": 0.075
+    },
+    "StripDatamoshGlitch": {
+      "strength": 1,
+      "horizontalBars": 42,
+      "verticalSlits": 18,
+      "tear": 0.18,
+      "chroma": 0.032,
+      "residue": 0.62,
+      "noiseAmount": 0.16,
+      "scanAmount": 0.13,
+      "flashAmount": 0.2
+    }
+  },
+  "files": [
+    {
+      "name": "Revolve_Left.glsl",
+      "source": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/902218a1b63773ac0d0d9f491951da3392365bfe/transitions/Revolve_Left.glsl"
+    },
+    {
+      "name": "Drop_Zone_Flicker.glsl",
+      "source": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/902218a1b63773ac0d0d9f491951da3392365bfe/transitions/Drop_Zone_Flicker.glsl"
+    },
+    {
+      "name": "StripDatamoshGlitch.glsl",
+      "source": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/902218a1b63773ac0d0d9f491951da3392365bfe/transitions/StripDatamoshGlitch.glsl"
+    },
+    {
+      "name": "LICENSE",
+      "source": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/902218a1b63773ac0d0d9f491951da3392365bfe/LICENSE"
+    },
+    {
+      "name": "README.md",
+      "source": "https://raw.githubusercontent.com/gl-transitions/gl-transitions/902218a1b63773ac0d0d9f491951da3392365bfe/README.md"
+    }
+  ],
+  "note": "Original shader logic and license headers retained. Vendored files match downloaded originals by SHA256. All three compiled and produced distinct real WebGL frames during 2026-09-12 browser QA; host adaptation and checks are documented in docs/research/continuous-publication.md."
+}

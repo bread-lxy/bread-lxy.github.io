@@ -1,0 +1,19 @@
+/* Shared accepted loading/title; all selectors remain scoped to this overlay. */
+.title-rift{--rift-paper:#f1edda;--rift-ink:#090b0e;position:fixed;inset:0;width:100vw;height:100%;z-index:1000;overflow:hidden;isolation:isolate;color:var(--rift-paper);font-family:'Album Pixel',monospace;touch-action:none;outline:none}
+.rift-canvas{display:block;width:100%;height:100%;overflow:hidden;pointer-events:none}
+.rift-ink{fill:var(--rift-ink)}
+.rift-still{visibility:hidden}.title-rift[data-beat=idle] .rift-still{visibility:visible}.title-rift[data-beat=idle] .rift-build{visibility:hidden}
+.rift-enter{position:absolute;display:flex;align-items:center;justify-content:center;gap:16px;margin:0;padding:0 18px;border:2px solid var(--rift-paper);border-radius:0;background:var(--rift-ink);color:var(--rift-paper);font:400 30px/1 'Album Pixel',monospace;letter-spacing:.09em;cursor:pointer;opacity:0;outline:0;touch-action:manipulation;box-shadow:4px 4px 0 #77796933}
+.rift-enter::before,.rift-enter::after{content:'';position:absolute;background:var(--rift-ink);width:4px;height:4px;top:-2px;left:-2px;box-shadow:0 calc(100% + 60px) 0 var(--rift-ink);pointer-events:none}
+.rift-enter::after{left:auto;right:-2px}
+.rift-pointer{width:10px;height:14px;background:currentColor;clip-path:polygon(0 0,4px 0,4px 3px,7px 3px,7px 5px,10px 5px,10px 9px,7px 9px,7px 11px,4px 11px,4px 14px,0 14px)}
+.rift-enter:hover,.rift-enter:focus-visible{background:var(--rift-paper);color:var(--rift-ink)}
+.rift-enter:focus-visible{outline:2px solid var(--rift-paper);outline-offset:7px}
+.rift-enter:hover .rift-pointer,.rift-enter:focus-visible .rift-pointer{translate:3px 0}
+.rift-enter:disabled{pointer-events:none}
+.rift-a11y{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.title-rift[data-phase=boot] .rift-enter{visibility:hidden}
+.title-rift[data-contrast=true]{--rift-paper:#fff;--rift-ink:#000}
+.title-rift[data-motion=reduced] .rift-scan{display:none}
+@media(max-width:700px){.rift-enter{font-size:28px;gap:14px;box-shadow:3px 3px 0 #77796933}}
+@media(forced-colors:active){.title-rift{--rift-paper:CanvasText;--rift-ink:Canvas}.rift-enter{forced-color-adjust:none}}

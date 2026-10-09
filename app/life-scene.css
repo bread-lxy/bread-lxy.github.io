@@ -1,0 +1,65 @@
+/* LIFE — scanned-paper scenery, not content cards. All selectors are local. */
+.life-scene{position:absolute;inset:0;isolation:isolate;pointer-events:none;overflow:hidden}
+.scene-life>.album-grain,.scene-life>.scene-shade{display:none}
+.life-paper-ground{position:absolute;inset:0;background-size:650px auto;mix-blend-mode:multiply;opacity:.63;filter:contrast(.83);pointer-events:none}
+.life-paper-fibers{position:absolute;inset:0;background-size:cover;background-position:center;mix-blend-mode:multiply;opacity:.72;pointer-events:none}
+.life-marks,.life-paper-stage{position:absolute;inset:0;pointer-events:none}
+.life-marks{z-index:0}
+.life-mark{position:absolute;left:var(--life-x);top:var(--life-y);width:var(--life-width);max-width:none;height:auto;transform:rotate(var(--life-angle));mix-blend-mode:multiply;filter:contrast(.9);pointer-events:none}
+.life-paper-stage{z-index:2}
+.life-paper-slot{position:absolute;left:var(--life-x);top:var(--life-y);width:var(--life-width);transform:rotate(var(--life-angle));pointer-events:none}
+.life-paper-parallax,.life-paper-reveal{position:relative;width:100%;height:100%}
+.life-paper{position:relative;aspect-ratio:var(--life-aspect);padding:clamp(8px,.8vw,16px);background:#faf9f2 url('/album/paper.jpg') center/430px auto;background-blend-mode:multiply;overflow:hidden;box-shadow:1px 2px 2px #33394112}
+.life-paper--deckle{clip-path:polygon(.3% .25%,28% .1%,54% .45%,79% 0,99.7% .4%,99.4% 24%,100% 46%,99.6% 76%,99.85% 99.6%,73% 99.9%,48% 99.55%,22% 100%,.35% 99.7%,0 66%,.45% 39%);padding:clamp(10px,1.2vw,22px) clamp(8px,.8vw,15px) clamp(13px,1.4vw,25px)}
+.life-paper--rag{clip-path:polygon(.5% 0,34% .3%,59% 0,99.6% .5%,99.9% 49%,99.5% 100%,70% 99.5%,39% 99.9%,0 99.3%,.5% 61%,0 22%);padding:clamp(7px,.7vw,12px) clamp(6px,.65vw,11px) clamp(12px,1vw,18px)}
+.life-paper--print{padding:clamp(6px,.65vw,12px) clamp(6px,.6vw,11px) clamp(17px,1.65vw,28px)}
+.life-paper>img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.67) contrast(.92);mix-blend-mode:multiply}
+.life-paper>img[hidden]{display:none}
+.life-print-grain{position:absolute;inset:0;background:url('/album/paper.jpg') center/370px auto;mix-blend-mode:multiply;opacity:.16;pointer-events:none}
+.life-jelly{position:absolute;inset:0;pointer-events:none}
+.life-jelly--back{z-index:1;opacity:.72}
+.life-jelly--front{z-index:3;opacity:.86}
+.life-jelly-drift{position:absolute;inset:0;transform:translate(var(--life-x),var(--life-y))}
+.life-jelly-heading{width:clamp(42px,var(--life-width),122px);transform:rotate(var(--life-angle));transform-origin:center 20%}
+.life-jelly-body{position:relative;width:100%;aspect-ratio:var(--life-jelly-aspect);overflow:hidden;image-rendering:pixelated;filter:hue-rotate(var(--life-jelly-tint)) saturate(.88)}
+.life-jelly-fallback{display:block;width:100%;height:100%;object-fit:contain}
+.life-jelly-sprite{position:absolute;left:0;top:0;display:block;width:var(--life-atlas-width);max-width:none;height:auto;visibility:hidden;image-rendering:pixelated}
+.life-jelly[data-sprite=ready] .life-jelly-sprite{visibility:visible}
+.life-jelly[data-sprite=ready] .life-jelly-fallback{visibility:hidden}
+.life-scene[data-reduced-motion=true] .life-jelly-sprite{visibility:hidden}
+.life-scene[data-reduced-motion=true] .life-jelly-fallback{visibility:visible}
+/* Solid color belongs to the stationary backdrop during LIFE transition edges. */
+.album-scene-stack[data-life-transition=true]>.album-scene-frame{background:transparent}
+.album-site[data-scene-phase=preview] .album-home:has(.album-scene-stack[data-life-transition=true])::before{background:none}
+.world-life .album-home .world-tab.is-active{color:#596879}
+.world-life .album-home .rpg-dialogue-stage{--hero-paper:#f5f3e9;--hero-accent:#c4c8e2;--hero-ink:#30313c;--hero-muted:#b9c9ce}
+.world-life .album-home :is(.rpg-dialogue,.rpg-action-rail){background:#2c2e38fa;border-color:#bccbd0;box-shadow:4px 4px 0 #30313c65}
+.world-life .album-home .rpg-dialogue__world{color:#b9d7dc}
+.world-life .album-home .rpg-action-rail button.is-active{color:#30313c}
+.world-life .foreground-caption{color:#697683}
+.world-life .album-home::after{border-color:#57677830}
+.life-scene[data-reduced-motion=true] :is(.life-jelly-drift,.life-jelly-body){animation:none!important}
+.life-scene[data-reduced-motion=true] .life-jelly--back{display:none}
+.rpg-high-contrast .life-marks,.rpg-high-contrast .life-jelly{display:none}
+.rpg-high-contrast.world-life .album-home :is(.rpg-dialogue,.rpg-action-rail){background:#000;border-color:#fff;color:#fff}
+.rpg-high-contrast.world-life .album-home .rpg-action-rail button.is-active{background:#fff;color:#000}
+@media(min-width:701px) and (max-width:1150px){
+ .life-paper-slot[data-paper=pomegranate]{left:32%;top:35%;width:17%}
+ .life-paper-slot[data-paper=pine]{left:42%;top:13%;width:24%}
+ .life-paper-slot[data-paper=shore]{left:36%;top:60%;width:21%}
+ .life-paper-slot[data-paper=pine-detail]{display:none}
+}
+@media(max-width:700px){
+ .life-paper-ground{background-size:430px auto}
+ .life-paper-slot,.life-mark{left:var(--life-mobile-x);top:var(--life-mobile-y);width:var(--life-mobile-width);transform:rotate(var(--life-mobile-angle))}
+ .life-jelly-drift{transform:translate(var(--life-mobile-x),var(--life-mobile-y))}
+ .life-jelly-heading{width:var(--life-mobile-width);transform:rotate(var(--life-mobile-angle))}
+ .life-scene [data-mobile=false]{display:none}
+ .life-paper-parallax{transform:none!important}
+ .life-paper{padding:7px 6px 12px}
+ .life-mark{opacity:.25!important}
+ .world-life .album-home .world-selector{background:#e9ece5}
+ .world-life .foreground-caption{display:none}
+}
+@media(prefers-reduced-motion:reduce){.life-scene *{animation:none!important;transition:none!important}.life-jelly--back{display:none}}
+@media(forced-colors:active){.life-marks,.life-jelly,.life-paper-ground{display:none}.world-life .album-home :is(.rpg-dialogue,.rpg-action-rail){forced-color-adjust:auto}}

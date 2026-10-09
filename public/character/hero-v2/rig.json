@@ -1,0 +1,210 @@
+{
+  "format": "anime25d-settings",
+  "version": 1,
+  "modelId": "59bd5a-29e0bf61-7f2cd949",
+  "params": {
+    "angleX": 0,
+    "angleY": 0,
+    "angleZ": 0,
+    "eyeOpenL": 1,
+    "eyeOpenR": 1,
+    "eyeX": 0,
+    "eyeY": 0,
+    "eyeSmile": 0,
+    "brow": 0,
+    "mouthOpen": 0,
+    "mouthForm": 0,
+    "mouthCY": 0,
+    "body": 0,
+    "physAmp": 0.45,
+    "soft": 0.5,
+    "browAngL": 0,
+    "browAngR": 0,
+    "browAngSym": 0,
+    "bangL": 0,
+    "bangC": 0,
+    "bangR": 0,
+    "armY": 0,
+    "armPos": 0,
+    "bust": 0,
+    "bustY": 1,
+    "irisScale": 1,
+    "mouthEase": 0.72,
+    "eyeEase": 0.3,
+    "fhAmp": 0.25,
+    "fhSoft": 0.5,
+    "eyeCY": 0,
+    "eyeCAng": 0,
+    "mouthCAng": 0,
+    "eyeScaleL": 1,
+    "eyeScaleR": 1,
+    "mouthScale": 1
+  },
+  "auto": {
+    "idle": true,
+    "blink": false,
+    "rand": false,
+    "talk": false,
+    "mouse": false,
+    "phys": true
+  },
+  "layers": [
+    {
+      "id": "0:topwear_1",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.9
+    },
+    {
+      "id": "1:topwear_2",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.9
+    },
+    {
+      "id": "2:back hair",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.55
+    },
+    {
+      "id": "3:back hair_1",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.55
+    },
+    {
+      "id": "4:back hair_2",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.55
+    },
+    {
+      "id": "5:legwear",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1
+    },
+    {
+      "id": "6:bottomwear",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.88
+    },
+    {
+      "id": "7:topwear",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.9
+    },
+    {
+      "id": "8:neck",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.95
+    },
+    {
+      "id": "9:handwear",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.86
+    },
+    {
+      "id": "10:ears",
+      "visible": true,
+      "opacity": 1,
+      "depth": 0.96
+    },
+    {
+      "id": "11:face",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1
+    },
+    {
+      "id": "12:nose",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.15
+    },
+    {
+      "id": "13:mouth_open",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.08
+    },
+    {
+      "id": "14:mouth_close",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.08
+    },
+    {
+      "id": "15:eyewhite_l",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.06
+    },
+    {
+      "id": "16:eyewhite_r",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.06
+    },
+    {
+      "id": "17:irides_l",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.08
+    },
+    {
+      "id": "18:irides_r",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.08
+    },
+    {
+      "id": "19:eyebrow_l",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.14
+    },
+    {
+      "id": "20:eyebrow_r",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.14
+    },
+    {
+      "id": "21:eyelash_l",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.12
+    },
+    {
+      "id": "22:eyelash_r",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.12
+    },
+    {
+      "id": "23:eye_close_l",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.12
+    },
+    {
+      "id": "24:eye_close_r",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.12
+    },
+    {
+      "id": "25:front hair",
+      "visible": true,
+      "opacity": 1,
+      "depth": 1.28
+    }
+  ],
+  "background": "dark"
+}

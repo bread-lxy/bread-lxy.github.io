@@ -1,0 +1,83 @@
+/* Experience only. Same poster language as Research/Projects, not a new page theme.
+ * Continuous lighting: unchanged React Bits SideRays shader; see ExperienceStageLight.
+ * Outer paper matrices remain owned by the existing Codrops world entrance.
+ */
+.world-experience .album-scene-frame:not(.outgoing-scene){background:transparent}
+.experience-stage-light{position:absolute;inset:0;z-index:0;overflow:hidden;mask-image:linear-gradient(90deg,transparent 25%,#000 48%)}
+.scene-experience .album-grain{opacity:.15}
+.scene-experience .scene-shade{background:linear-gradient(90deg,var(--hero-ink) 0%,var(--hero-ink) 24%,transparent 34%)}
+.scene-experience .dossier-page{padding:0;background:none;border:0;box-shadow:none;overflow:visible}
+.scene-experience .dossier-0{left:32%;top:15%;width:51%;height:32%;transform:rotate(-6deg)}
+.scene-experience .dossier-1{left:33%;top:49%;width:59%;height:31%;transform:rotate(4deg)}
+.dossier-surface{position:absolute;inset:0;padding:25px 30px;overflow:hidden;background:#F3EEDF url('/album/paper.jpg') center/620px;background-blend-mode:multiply;color:#202821;border:1px solid #f6f0dfb3;box-shadow:0 2px 0 #a5a799,0 18px 28px #0004;transform-origin:52% 50%}
+.dossier-surface::before{content:'';position:absolute;inset:12px;border:1px solid #252b241c;pointer-events:none}
+.dossier-surface::after{content:'';position:absolute;left:29px;right:29px;bottom:24px;height:1px;background:#272d2340;pointer-events:none}
+.dossier-index{position:absolute;left:34%;top:-16%;font:500 clamp(220px,23vw,360px)/1 var(--album-serif);letter-spacing:-.1em;color:#343e3017;pointer-events:none}
+.scene-experience .education-copy{position:relative;z-index:1;max-width:320px}
+.scene-experience .dossier-tag{font:16px/1 var(--album-pixel);letter-spacing:.025em;color:#a53b32;border-bottom:1px solid #27312675;padding-bottom:13px}
+.scene-experience .dossier-page strong{font:650 clamp(30px,2.4vw,42px)/1.28 var(--album-sans);letter-spacing:-.055em;max-width:none;margin:18px 0 0}
+.scene-experience .dossier-year{font:italic 30px/1.25 var(--album-serif);letter-spacing:-.04em;margin:11px 0 8px;white-space:nowrap}
+.scene-experience .dossier-1 .dossier-year{font-size:25px}
+.scene-experience .dossier-role{display:block;font:16px/1.5 var(--album-sans);color:#4d5749}
+.dossier-0 .dossier-surface{animation:certificate-near 8s ease-in-out infinite}
+.dossier-1 .dossier-surface{animation:certificate-far 11s ease-in-out infinite;animation-delay:-3s}
+@keyframes certificate-near{0%,100%{transform:translate3d(0,3px,0) rotate(-.18deg)}50%{transform:translate3d(0,-5px,0) rotate(.17deg)}}
+@keyframes certificate-far{0%,100%{transform:translate3d(0,-3px,0) rotate(.16deg)}50%{transform:translate3d(0,4px,0) rotate(-.19deg)}}
+.album-site:not([data-scene-phase=idle]) .dossier-surface,.outgoing-scene .dossier-surface{animation-play-state:paused}
+.album-scene-hold:has(.experience-stage-light:not([data-stage-light-state=playing])) .dossier-surface{animation-play-state:paused}
+.world-experience .experience-ribbon{height:112px;min-height:112px;box-sizing:border-box;background:#171C1A;border-color:#F06C5E;border-bottom-color:#f3eedf45}
+.world-experience .ribbon-item{min-height:0;height:109px;box-sizing:border-box}
+.world-experience .ribbon-divider{color:#F06C5E}
+.world-experience .ribbon-control{background:#171C1A}
+.world-experience .ribbon-static{height:auto}
+.world-experience .ribbon-static .ribbon-item{height:auto;min-height:109px}
+@media(min-width:701px){
+ .world-experience .album-home .album-wordmark{left:18px;right:18px;height:min(22vw,23svh);max-height:none}
+ .world-experience .album-home .preview-copy>span{font-size:16px;margin:8px 0}
+ .world-experience .album-home .hero-preview .preview-copy strong{font-size:26px}
+}
+@media(min-width:701px) and (max-height:850px){
+ .world-experience .album-home .preview-copy>span{font-size:16px;margin:8px 0}
+}
+@media(min-width:701px) and (max-width:1150px){
+ .world-experience .album-home.hero-lobby{min-height:0}
+ /* Other tablet covers retain their existing 850px minimum stage. Match their
+    wordmark sizing, not the shorter Experience stage reserved for the ribbon. */
+ .world-experience .album-home .album-wordmark{height:min(23vw,max(19svh,161.5px))}
+ .world-experience .album-home .hero-preview .preview-copy strong{font-size:22px}
+ .world-experience .album-home .preview-copy>span{font-size:14px;margin:2px 0 4px}
+ .scene-experience .dossier-0{left:35%;top:15%;width:57%;height:32%;transform:rotate(-4deg)}
+ .scene-experience .dossier-1{left:35%;top:51%;width:60%;height:34%;transform:rotate(3deg)}
+ .scene-experience .dossier-surface{padding:20px}
+ .scene-experience .education-copy{max-width:225px}
+ .scene-experience .dossier-page strong{font-size:27px}
+ .scene-experience .dossier-year{font-size:23px}
+ .scene-experience .dossier-index{left:38%;font-size:220px}
+ .scene-experience .dossier-tag{font-size:12px;padding-bottom:10px}
+ .scene-experience .dossier-role{font-size:14px}
+ .scene-experience .dossier-1 .education-copy{max-width:160px}
+ .scene-experience .dossier-1 strong{max-width:160px;font-size:22px}
+ .scene-experience .dossier-1 .dossier-year{max-width:150px;white-space:normal;font-size:22px}
+}
+@media(max-width:700px){
+ .experience-stage-light{height:1050px;mask-image:linear-gradient(180deg,transparent 10%,#000 26%,#000 70%,transparent)}
+ .scene-experience .dossier-0{left:22px;top:216px;width:calc(100% - 44px);height:150px;transform:rotate(-2deg)}
+ .scene-experience .dossier-1{left:22px;top:382px;width:calc(100% - 44px);height:136px;transform:rotate(2deg)}
+ .scene-experience .dossier-surface{padding:14px 18px}
+ .scene-experience .dossier-surface::before{inset:7px}
+ .scene-experience .dossier-surface::after{display:none}
+ .scene-experience .education-copy{max-width:none;gap:3px 8px}
+ .scene-experience .dossier-tag{font-size:12px;padding-bottom:7px}
+ .scene-experience .dossier-page strong{font-size:24px;margin:4px 0 0}
+ .scene-experience .dossier-year{font-size:18px;margin:0;white-space:normal}
+ .scene-experience .dossier-role{font-size:14px}
+ .scene-experience .dossier-index{font-size:175px;left:48%;top:-14%;color:#343e3011}
+ .scene-experience .dossier-1 .dossier-year{font-size:18px}
+ .world-experience .experience-ribbon{height:104px;min-height:104px}
+ .world-experience .ribbon-item{height:101px}
+ .world-experience .ribbon-static{height:auto}
+ .world-experience .album-home .selector-help{background:#171C1A}
+ .world-experience .album-home .hero-bottom{right:auto;left:22px;bottom:22px}
+}
+@media(prefers-reduced-motion:reduce){.dossier-surface{animation:none!important}}
+@media(forced-colors:active){.experience-stage-light{display:none}.dossier-index{color:GrayText}.dossier-surface{background:Canvas;color:CanvasText;border:1px solid CanvasText}}

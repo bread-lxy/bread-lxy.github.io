@@ -1,0 +1,27 @@
+/* v5: the desktop is underwater, not a broken operating system. */
+.experience-aquatic-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;image-rendering:pixelated}
+.experience-aquatic-canvas[data-failed=true]{visibility:hidden}
+/* Same stack level, later sibling than the window track: complete foreground
+   fish paint over window chrome/content. Character (4), identity/nav (8) and
+   dialogue (16) remain above both; no masks simulate this depth relationship. */
+.experience-aquatic-foreground{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;opacity:0}
+.world-experience .experience-aquatic-foreground{opacity:1}
+.experience-desktop-wallpaper{background:linear-gradient(155deg,#a4c7ff 0%,#9dbbff 42%,#929edb 100%)}
+.experience-desktop-wallpaper .exp-wallpaper-haze{opacity:.18}
+.experience-desktop-wallpaper .exp-wallpaper-dither{opacity:.14}
+.experience-desktop-wallpaper .exp-starfield{opacity:.38}
+.experience-desktop-wallpaper .exp-starfield i{width:4px;height:4px;clip-path:none;animation:none;opacity:.55}
+.experience-desktop-wallpaper .exp-starfield i:nth-child(n+5){display:none}
+.exp-window::after{content:'';position:absolute;inset:0;border:1px solid #d6fcff;opacity:var(--exp-edge-light,0);pointer-events:none;clip-path:polygon(0 0,58% 0,58% 2px,2px 2px,2px 48%,0 48%)}
+.exp-notice-caret{display:inline-block;width:8px;height:13px;margin-left:3px;background:#9589c5;vertical-align:-1px;opacity:.75;animation:exp-dream-caret 2.6s steps(1,end) infinite;animation-play-state:paused}
+[data-experience-motion=true] .exp-notice-caret{animation-play-state:running}
+@keyframes exp-dream-caret{0%,62%,100%{opacity:.75}63%,99%{opacity:0}}
+.experience-desktop[data-entering=true] .exp-title-grip{animation:exp-title-redraw .36s steps(4,end) both}
+@keyframes exp-title-redraw{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
+.outgoing-windows .exp-window::after{display:none}
+.outgoing-windows .exp-notice-caret{animation:none}
+[data-aquatic-reduced=true] .exp-notice-caret{animation:none;opacity:.65}
+.rpg-high-contrast .experience-aquatic-canvas,[data-aquatic-suppressed=true] .experience-aquatic-canvas{visibility:hidden}
+.album-site[data-entry-phase=entering] .experience-aquatic-foreground{opacity:var(--awakening-ui,0)}
+@media(prefers-reduced-motion:reduce){.exp-notice-caret,.exp-title-grip{animation:none!important}}
+@media(forced-colors:active){.experience-aquatic-canvas{display:none}.exp-window::after,.exp-notice-caret{display:none}}

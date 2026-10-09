@@ -1,0 +1,36 @@
+/* The VIDEO wall's actual analogue surfaces in a homepage-specific composition. */
+.scene-studio .album-grain,.scene-studio .scene-shade{display:none}
+.studio-lobby-wall{position:absolute;inset:0;overflow:hidden;isolation:isolate;pointer-events:none}
+.studio-lobby-ground{position:absolute;inset:0;z-index:0;background:#08090e url('/publication/tv-wall/dust-wall.webp') center/cover no-repeat}
+.studio-lobby-cables{position:absolute;inset:-9% -4% -2% 20%;z-index:1;background:url('/publication/tv-wall/cable-bundles.webp') center top/100% 100% no-repeat;opacity:.91}
+.studio-lobby-tv{position:absolute;left:var(--lobby-x);top:var(--lobby-y);width:var(--lobby-w);z-index:var(--lobby-z);rotate:var(--lobby-r);margin:0;transform-origin:center}
+.studio-lobby-tv-inner{width:100%;height:100%}
+.studio-lobby-tv .tv-bezel{padding:5px;background:#17191d url('/publication/tv-wall/dust-wall.webp') center/430px;border:2px solid #3a3d45;outline:1px solid #090a0e;box-shadow:0 3px 0 #07080b,0 13px 24px #000b}
+.studio-lobby-tv .tv-screen{aspect-ratio:var(--tv-ratio);background-color:#07090e}
+.studio-lobby-tv .tv-screen>img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;filter:contrast(1.04) saturate(.82) brightness(.94)}
+.studio-lobby-tv[data-signal="off"] .tv-signal{filter:brightness(.12) saturate(.4)}
+.studio-lobby-tv[data-signal="off"] .tv-bezel{border-color:#484b54}
+.studio-lobby-tv[data-signal="snow"] .tv-signal{filter:brightness(.53) saturate(.62)}
+.studio-lobby-tv[data-signal="sample"] .tv-signal{filter:none;background:#20242d url('/publication/tv-wall/analog-snow.webp') center/cover no-repeat}
+.studio-lobby-tv .tv-glass{background:repeating-linear-gradient(0deg,#03030a12 0 1px,transparent 1px 4px),radial-gradient(ellipse at 50% 47%,transparent 56%,#05040a66 100%)}
+.world-studio .album-home .rpg-dialogue,.world-studio .album-home .rpg-action-rail{background:#090b12f5;border-color:#aeb8ca;box-shadow:4px 4px 0 #05060bb8}
+.world-studio .album-home .rpg-action-rail button{border-color:#aeb8ca}
+.album-site:has(.album-scene-stack[data-studio-transition="true"])[data-scene-phase="preview"] .album-home::before{display:none}
+
+@media(max-width:1100px){
+  .studio-lobby-tv .tv-bezel{padding:4px}
+  .studio-lobby-cables{inset:-7% -15% 0 13%;background-size:auto 100%}
+}
+@media(max-width:700px){
+  .studio-lobby-tv{left:var(--lobby-mx);top:var(--lobby-my);width:var(--lobby-mw);rotate:var(--lobby-mr)}
+  .studio-lobby-tv .tv-bezel{padding:3px;border-width:1px;box-shadow:0 2px 0 #05060a,0 8px 18px #000b}
+  .studio-lobby-cables{inset:11% -28% 16%;background-size:auto 85%;opacity:.83}
+  .studio-lobby-tv .tv-screen>img{filter:contrast(1.04) saturate(.8) brightness(.9)}
+}
+@media(prefers-reduced-motion:reduce){.studio-lobby-tv-inner{opacity:1!important;transform:none!important}}
+@media(forced-colors:active){
+  .studio-lobby-ground{background:Canvas}
+  .studio-lobby-cables,.studio-lobby-tv .tv-glass{display:none}
+  .studio-lobby-tv .tv-bezel{background:Canvas;border:2px solid CanvasText;outline:none;box-shadow:none}
+  .world-studio .album-home .rpg-dialogue,.world-studio .album-home .rpg-action-rail{forced-color-adjust:auto}
+}

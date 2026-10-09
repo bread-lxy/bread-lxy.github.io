@@ -1,0 +1,122 @@
+/* Shared lobby dialogue and guide controls. */
+body.rpg-entry-lock{overflow:hidden}
+.album-site[data-entry-phase="boot"]> :not([data-entry-overlay]),.album-site[data-entry-phase="title"]> :not([data-entry-overlay]){visibility:hidden}
+.album-home .track-index,.album-home .track-name{position:relative;z-index:1}
+/* BGM-only status-bar layer: existing typography, hitboxes and hover stay intact. */
+.album-home .world-tab>.world-music-fill{position:absolute;inset:1px 0;pointer-events:none;background:var(--hero-accent);border-radius:0;transform-origin:left center;transform:scaleX(var(--music-energy,0));opacity:0;transition:transform .22s ease-out,opacity .22s ease-out}
+.album-home .world-selector[data-music-active="true"] .world-music-fill{opacity:.12;transition:opacity .18s ease-out}
+.album-home .world-selector[data-music-active="true"] .world-tab.is-active>.world-music-fill{opacity:.23}
+.album-site[data-reduced-motion="true"] .world-music-fill{display:none}
+.album-site.rpg-high-contrast .world-selector[data-music-active="true"] .world-music-fill{opacity:.08}
+.album-site.rpg-high-contrast .world-selector[data-music-active="true"] .world-tab.is-active>.world-music-fill{opacity:.14}
+@media(prefers-reduced-motion:reduce),(forced-colors:active){.album-home .world-music-fill{display:none}}
+.album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .album-home.hero-lobby{min-height:720px}
+
+.album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .rpg-dialogue-stage{display:grid}
+.rpg-dialogue-stage{position:absolute;z-index:16;left:36px;right:36px;bottom:28px;display:none;grid-template-columns:minmax(0,1fr) 150px;gap:14px;align-items:stretch;pointer-events:none}
+.rpg-dialogue-stage>*{pointer-events:auto}
+.rpg-dialogue{position:relative;display:grid;grid-template-columns:minmax(0,1fr);min-width:0;padding:16px 20px 12px;background:#080b10fa;border:2px solid var(--hero-paper);box-shadow:4px 4px 0 #05070bb8;color:var(--hero-paper);font-family:var(--album-pixel);cursor:pointer}
+.rpg-dialogue__header{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 12px;padding-bottom:8px}
+.rpg-dialogue__world{font-size:14px;color:var(--hero-accent);letter-spacing:.04em}
+.rpg-dialogue__speaker{margin:0;font:400 17px/1.2 var(--album-pixel);color:var(--hero-paper)}
+.rpg-dialogue__copy-wrap{min-width:0;display:flex;align-items:stretch}
+.rpg-dialogue__copy{display:block;width:100%;min-height:80px;padding:4px 0;border:0;background:transparent;color:var(--hero-paper);text-align:left;font:400 clamp(20px,1.65vw,28px)/1.6 var(--album-pixel);cursor:pointer}
+.rpg-dialogue__copy:focus-visible,.rpg-dialogue__next:focus-visible{outline:2px solid var(--hero-paper);outline-offset:3px}
+.rpg-dialogue__text{white-space:normal;overflow-wrap:anywhere}
+.rpg-dialogue__caret{display:inline-block;margin-left:4px;color:var(--hero-accent);animation:rpg-caret-blink .8s steps(2,end) infinite}
+.rpg-dialogue__announcement{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.rpg-dialogue__next{display:grid;place-items:center;justify-self:center;width:44px;height:28px;min-width:44px;padding:0;border:0;background:transparent;color:var(--hero-paper);cursor:pointer}
+.rpg-dialogue__next:hover{color:var(--hero-accent)}
+.rpg-dialogue[data-typing="true"] .rpg-dialogue__next{visibility:hidden;pointer-events:none}
+.rpg-dialogue[data-has-next="false"] .rpg-dialogue__next{display:none}
+.rpg-dialogue__triangle{width:16px;height:8px;background:currentColor;clip-path:polygon(0 0,100% 0,100% 25%,87.5% 25%,87.5% 50%,75% 50%,75% 75%,62.5% 75%,62.5% 100%,37.5% 100%,37.5% 75%,25% 75%,25% 50%,12.5% 50%,12.5% 25%,0 25%)}
+.rpg-dialogue[data-typing="false"][data-has-next="true"] .rpg-dialogue__next .rpg-dialogue__triangle{animation:rpg-continue 1.2s steps(2,end) infinite}
+.rpg-dialogue[data-reduced-motion="true"] *{animation:none!important}
+.rpg-action-rail{display:grid;align-content:center;padding:0;background:transparent;border:0;box-shadow:none;pointer-events:none}
+.album-site .album-home .rpg-dialogue-stage .rpg-action-rail{background:transparent;border:0;box-shadow:none}
+.rpg-action-rail button{display:grid;place-items:center;width:100%;min-height:64px;padding:8px 4px;text-align:center;border:2px solid color-mix(in srgb,var(--hero-paper) 75%,transparent);background:#080b10fa;box-shadow:4px 4px 0 #05070bb8;color:var(--hero-paper);font:400 24px/1.2 var(--album-pixel);cursor:pointer;pointer-events:auto}
+.rpg-action-rail button:hover,.rpg-action-rail button:focus-visible,.rpg-action-rail button.is-active{background:var(--hero-accent);border-color:var(--hero-accent);color:var(--hero-ink)}
+.rpg-action-rail button:focus-visible{outline:2px solid var(--hero-paper);outline-offset:3px}
+/* Both the guide and world lines use the same low dialogue plate and caret. */
+.page-guide-stage .page-guide-dialogue{min-height:154px}
+.page-guide-dialogue[data-choice-step="true"]{min-height:280px;align-content:start}
+.page-guide-dialogue .rpg-dialogue__header{align-items:baseline;gap:8px 12px}
+.page-guide-dialogue .rpg-dialogue__copy{min-height:76px;font-size:clamp(20px,1.5vw,25px);line-height:1.5}
+.page-guide-progress,.page-guide-dialogue__progress{margin-left:auto;color:var(--hero-accent);font:14px/1.2 var(--album-pixel);white-space:nowrap;font-variant-numeric:tabular-nums}
+.page-guide-choice-list{display:grid;gap:2px;width:min(260px,calc(100% - 26px));margin:6px 0 5px 26px}
+.page-guide-choice-list.is-pending{visibility:hidden;pointer-events:none}
+.page-guide-choice{position:relative;display:flex;align-items:center;width:100%;min-height:44px;padding:5px 14px 5px 24px;border:1px solid transparent;background:transparent;color:var(--hero-paper);font:400 22px/1.3 var(--album-pixel);text-align:left;white-space:nowrap;cursor:pointer;transition:color .16s,background-color .16s,border-color .16s}
+.page-guide-choice::before{content:'›';position:absolute;left:6px;top:50%;translate:0 -50%;color:var(--hero-accent);font:28px/1 var(--album-pixel);opacity:0;transition:opacity .16s;pointer-events:none}
+.page-guide-choice:hover,.page-guide-choice:focus-visible{border-color:var(--hero-accent);background:color-mix(in srgb,var(--hero-accent) 16%,transparent);color:var(--hero-paper)}
+.page-guide-choice:hover::before,.page-guide-choice:focus::before,.page-guide-choice.is-selected::before{opacity:1}
+.page-guide-choice.is-selected{border-color:var(--hero-accent);background:var(--hero-accent);color:var(--hero-ink)}
+.page-guide-choice.is-selected::before{color:var(--hero-ink)}
+.page-guide-choice:focus-visible{outline:2px solid var(--hero-paper);outline-offset:3px}
+.page-guide-choice:disabled{opacity:.45;cursor:default}
+.album-site.page-guide-active[data-guide-step="3"] .album-home .world-selector,
+.album-site.page-guide-active[data-guide-step="4"] .audio-controls,
+.album-site.page-guide-active[data-guide-step="8"] .brand-lockup,
+.album-site.page-guide-active[data-guide-step="8"] .rpg-action-rail button:first-child{animation:page-guide-spotlight 1.65s ease-out 1}
+.album-site.page-guide-active[data-guide-step="6"] .character-hit-head,
+.album-site.page-guide-active[data-guide-step="6"] .character-hit-ear{animation:page-guide-touch-target 1.65s ease-out 1}
+@keyframes page-guide-spotlight{0%,100%{box-shadow:0 0 0 0 transparent}20%,65%{box-shadow:0 0 0 2px var(--hero-accent),0 0 0 7px color-mix(in srgb,var(--hero-accent) 18%,transparent)}}
+@keyframes page-guide-touch-target{0%,100%{box-shadow:inset 0 0 0 0 transparent;background:transparent}22%,65%{box-shadow:inset 0 0 0 3px var(--hero-accent);background:color-mix(in srgb,var(--hero-accent) 12%,transparent)}}
+@keyframes rpg-continue{50%{opacity:.45;translate:0 2px}}
+.rpg-high-contrast .rpg-dialogue{border-width:4px;background:#000;color:#fff}.rpg-high-contrast .rpg-dialogue__copy{color:#fff}.rpg-high-contrast .rpg-action-rail button{color:#fff;background:#000;border-color:#fff}.rpg-high-contrast .rpg-action-rail button.is-active,.rpg-high-contrast .rpg-action-rail button:hover{color:#000;background:#fff}
+.rpg-high-contrast .page-guide-choice{border-color:#fff;color:#fff;background:#000}.rpg-high-contrast .page-guide-choice:hover,.rpg-high-contrast .page-guide-choice:focus-visible,.rpg-high-contrast .page-guide-choice.is-selected{color:#000;background:#fff}.rpg-high-contrast .page-guide-choice.is-selected::before{color:#000}
+@keyframes rpg-caret-blink{50%{opacity:0}}
+
+
+@media(max-width:900px){
+ .rpg-dialogue-stage{left:22px;right:22px;grid-template-columns:minmax(0,1fr) 120px;gap:10px}
+ .rpg-dialogue{padding:14px 16px}.rpg-dialogue__copy{font-size:21px}
+ .rpg-action-rail button{font-size:22px}
+ .page-guide-choice{font-size:21px}
+}
+@media(min-width:701px) and (max-height:850px){.album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .selector-help{display:none}}
+/* The guide plate grows with its text; anchor its lower edge to the visible
+   tablet viewport and clear the selector, without relying on a fixed height. */
+@media(min-width:701px) and (max-width:1150px) and (max-height:850px){
+ .album-site.page-guide-active .album-home .rpg-dialogue-stage.page-guide-stage{top:calc(100svh - 28px);bottom:auto;left:calc(var(--left) + var(--column) + 24px);transform:translateY(-100%)}
+ .album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .album-home .rpg-dialogue-stage:not(.page-guide-stage){top:calc(100svh - 28px);bottom:auto;transform:translateY(-100%)}
+}
+@media(max-width:700px){
+ /* The RPG controls replaced the old tall Experience cover. Keep its face in
+    the same visible stage as the other worlds, not behind the dialogue at 660px. */
+ .album-site.world-experience .album-home.hero-lobby .hero-character.hero-character-live{top:calc(300px - var(--stage)*.1853)}
+ .album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .album-home .selector-block{padding-top:clamp(360px,calc(145vw - 165px),470px)}
+ /* The hidden preview must not reserve its old 118px before the in-flow guide. */
+ .album-site.page-guide-active .album-home .selector-block .hero-preview{display:none}
+ .album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .album-home .rpg-dialogue-stage{top:calc(clamp(360px,calc(145vw - 165px),470px) + 130px);bottom:auto;left:22px;right:22px;grid-template-columns:minmax(0,1fr);gap:10px}
+ .album-site.page-guide-active .album-home.hero-lobby{height:auto;min-height:100svh;padding-bottom:28px}
+ .album-site.page-guide-active .album-home .rpg-dialogue-stage.page-guide-stage{position:relative;top:auto;bottom:auto;left:auto;right:auto;margin:18px 22px 0;transform:none}
+ .rpg-dialogue{padding:14px}.rpg-dialogue__header{gap:8px 10px}
+ .rpg-dialogue__speaker{font-size:16px}.rpg-dialogue__copy{font-size:20px;line-height:1.5;min-height:96px}
+ .rpg-action-rail{grid-template-columns:1fr;grid-template-rows:auto}
+ .rpg-action-rail button{font-size:22px;min-height:52px}
+ .page-guide-stage .page-guide-dialogue{min-height:0;padding:14px}
+ .page-guide-dialogue[data-choice-step="true"]{min-height:322px}
+ .page-guide-dialogue .rpg-dialogue__header{align-items:center;gap:4px 8px}
+ .page-guide-dialogue .rpg-dialogue__copy{min-height:96px;font-size:20px;line-height:1.5}
+ .album-site.page-guide-active[data-guide-step="8"] .page-guide-dialogue .rpg-dialogue__copy{font-size:19px;line-height:1.4}
+ .page-guide-progress,.page-guide-dialogue__progress{font-size:12px}
+ .page-guide-choice-list{width:calc(100% - 12px);margin:6px 0 4px 12px}
+ .page-guide-choice{font-size:20px;min-height:44px}
+ .album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .selector-help{display:none}
+}
+@media(prefers-reduced-motion:reduce){.rpg-entry *,.rpg-dialogue *{animation:none!important;transition:none!important}.rpg-entry-scanlines{display:none}.rpg-dialogue__caret{opacity:1}}
+.album-site[data-reduced-motion="true"] .page-guide-choice,
+.album-site[data-reduced-motion="true"] .page-guide-choice::before{transition:none!important}
+.album-site[data-reduced-motion="true"].page-guide-active[data-guide-step="3"] .album-home .world-selector,
+.album-site[data-reduced-motion="true"].page-guide-active[data-guide-step="4"] .audio-controls,
+.album-site[data-reduced-motion="true"].page-guide-active[data-guide-step="8"] .brand-lockup,
+.album-site[data-reduced-motion="true"].page-guide-active[data-guide-step="8"] .rpg-action-rail button:first-child{animation:none;outline:2px solid var(--hero-accent);outline-offset:3px}
+.album-site[data-reduced-motion="true"].page-guide-active[data-guide-step="6"] .character-hit-head,
+.album-site[data-reduced-motion="true"].page-guide-active[data-guide-step="6"] .character-hit-ear{animation:none;box-shadow:inset 0 0 0 2px var(--hero-accent)}
+@media(prefers-reduced-motion:reduce){
+ .album-site.page-guide-active[data-guide-step="3"] .album-home .world-selector,.album-site.page-guide-active[data-guide-step="4"] .audio-controls,.album-site.page-guide-active[data-guide-step="8"] .brand-lockup,.album-site.page-guide-active[data-guide-step="8"] .rpg-action-rail button:first-child{animation:none;outline:2px solid var(--hero-accent);outline-offset:3px}
+ .album-site.page-guide-active[data-guide-step="6"] .character-hit-head,.album-site.page-guide-active[data-guide-step="6"] .character-hit-ear{animation:none;box-shadow:inset 0 0 0 2px var(--hero-accent)}
+}
+@media(forced-colors:active){.rpg-entry{forced-color-adjust:none}.rpg-dialogue{forced-color-adjust:auto;background:Canvas;color:CanvasText;border-color:CanvasText}.rpg-action-rail button{forced-color-adjust:auto;background:Canvas;color:CanvasText;border-color:CanvasText;box-shadow:none}.rpg-dialogue__copy,.rpg-dialogue__next,.page-guide-choice{color:CanvasText}.rpg-dialogue__world,.page-guide-progress{color:Highlight}.page-guide-choice:hover,.page-guide-choice:focus-visible,.page-guide-choice.is-selected,.rpg-action-rail button:hover,.rpg-action-rail button:focus-visible{background:Highlight;color:HighlightText;border-color:Highlight}.rpg-title-menu>button:focus-visible,.rpg-action-rail button:focus-visible,.page-guide-choice:focus-visible,.rpg-dialogue__copy:focus-visible,.rpg-dialogue__next:focus-visible{outline:3px solid Highlight;outline-offset:3px}}
+.album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .album-home .hero-preview,.album-site:is([data-entry-phase="lobby"],[data-entry-phase="entering"]) .album-home .hero-bottom{visibility:hidden;pointer-events:none}
+.album-site.mode-content .rpg-dialogue-stage{display:none!important}

@@ -1,0 +1,171 @@
+/* RESEARCH / a monochrome evidence table, always behind the character/UI. */
+.research-dossier{--research-ink:#171b1a;--research-paper:#ebe9df;--research-accent:#a8d6da;position:absolute;inset:0;isolation:isolate;overflow:hidden;color:var(--research-paper);font-family:var(--album-sans);pointer-events:none}
+.scene-research>.scene-shade{display:none}
+.research-dossier-ground{position:absolute;inset:0;background:radial-gradient(ellipse at 69% 40%,#242b2b 0%,#111516 56%,#0b0e0f 100%)}
+.research-dossier-ground::before{content:'';position:absolute;inset:45px 3.2% 7% 26%;border:1px solid #d5ddd526;border-bottom-style:dashed}
+.research-dossier-ground::after{content:'';position:absolute;left:26%;right:3.2%;top:33%;height:1px;background:#d5ddd526;box-shadow:0 228px #d5ddd51a}
+.research-dossier-register{position:absolute;inset:0;background:linear-gradient(90deg,transparent 25.9%,#e7ede92b 26%,transparent 26.1%,transparent 79.9%,#e7ede927 80%,transparent 80.1%);opacity:.4}
+.research-dossier-index{position:absolute;z-index:0;left:29%;top:6%;font:11px/1 var(--album-pixel);letter-spacing:.08em;color:#bac8c6}
+.research-dossier-index span{display:inline-block;margin-right:14px;color:var(--research-accent)}
+.research-drop{position:absolute;z-index:1}
+.research-drop-cities{left:29%;top:10%;width:62%;height:65%;z-index:1}
+.research-main-paper{position:relative;width:100%;height:100%;transform:rotate(1.4deg);transform-origin:50% 20%;background:var(--research-paper) url('/album/paper.jpg') center/760px;color:var(--research-ink);border:1px solid #f7f6ef;box-shadow:5px 6px 0 #b9bbb2,10px 12px 0 #6a6d68,17px 25px 30px #0008;overflow:hidden}
+.research-main-paper::before{content:'';position:absolute;inset:15px 16px 14px 26px;border:1px solid #1b201e5c;pointer-events:none}
+.research-binder-holes{position:absolute;z-index:2;left:8px;top:15%;bottom:16%;display:flex;flex-direction:column;justify-content:space-between}
+.research-binder-holes i{width:10px;height:10px;border-radius:50%;background:#101516;box-shadow:inset 1px 2px 2px #000b,1px 1px 0 #fff9}
+.research-paper-inner{position:relative;width:100%;height:100%;padding:27px 30px 22px 42px;overflow:hidden}
+.research-paper-head{display:flex;justify-content:space-between;gap:12px;padding-bottom:10px;font:11px/1.2 var(--album-pixel);letter-spacing:.055em;white-space:nowrap}
+.research-paper-rule{height:3px;background:var(--research-ink);box-shadow:0 5px 0 #171b1a40}
+.research-paper-reading{position:absolute;z-index:1;left:6.4%;top:15%;width:42%;max-width:368px}
+.research-paper-status{display:inline-block;padding:8px 10px 7px;background:var(--research-ink);color:#edf2eb;font:700 clamp(17px,1.55vw,23px)/1 var(--album-sans);letter-spacing:-.025em;white-space:nowrap}
+.research-paper-status span{color:var(--research-accent)}
+.research-paper-jcr{margin-top:7px;font:11px/1.25 var(--album-sans);color:#38403d;white-space:nowrap}
+.research-paper-jcr i{font-style:italic}
+.research-paper-reading h2{margin:23px 0 0;font:700 clamp(24px,2.5vw,37px)/1.16 var(--album-sans);letter-spacing:-.055em;white-space:nowrap}
+.research-paper-finding{margin:15px 0 0;border-top:1px solid #222824;padding-top:11px;font:600 clamp(15px,1.34vw,19px)/1.3 var(--album-sans);letter-spacing:-.03em;white-space:nowrap}
+.research-paper-finding span{color:#386d72}
+.research-paper-method{margin:9px 0 0;font:11px/1.3 var(--album-pixel);color:#424d49;white-space:nowrap}
+.research-paper-photo{position:absolute;top:17%;right:4%;width:45%;height:62%;margin:0;border:7px solid #f5f3e9;background:#c5c8c1;box-shadow:0 0 0 1px #242b29a1,7px 9px 12px #0003;transform:rotate(-2.4deg);overflow:hidden}
+.research-paper-photo img{display:block;width:100%;height:calc(100% - 23px);object-fit:cover;object-position:center 43%;filter:grayscale(1) contrast(1.2)}
+.research-paper-photo figcaption{padding:5px 7px 0;font:9px/1 var(--album-pixel);letter-spacing:.04em;white-space:nowrap}
+.research-paper-foot{position:absolute;left:6.4%;right:6%;bottom:5%;display:flex;flex-direction:column;gap:4px;border-top:1px solid #1a22207d;padding-top:9px;max-width:82%;font:11px/1.35 var(--album-sans)}
+.research-paper-foot span:first-child{font-style:italic}
+.research-paper-foot span:last-child{font-size:10px;color:#45514d}
+
+/* The other three materials have deliberately different physical formats,
+   but share one ink/paper palette and the same two-level type hierarchy. */
+.research-drop-worldquant{left:79%;top:11%;width:19%;height:22%;z-index:3}
+.research-backtest-record{position:relative;width:100%;height:100%;padding:14px 16px;transform:rotate(-4deg);background:#232827 url('/album/paper.jpg') center/420px;background-blend-mode:multiply;color:#eeede5;border:1px solid #a9b4af91;box-shadow:7px 12px 18px #000a;overflow:hidden}
+.research-backtest-record::before{content:'';position:absolute;inset:7px;border:1px solid #f0f1e852;pointer-events:none}
+.research-record-head{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid currentColor;padding-bottom:6px;font:10px/1.1 var(--album-pixel);letter-spacing:.025em;white-space:nowrap}
+.research-backtest-record strong{display:block;margin-top:16px;font:650 clamp(19px,1.75vw,26px)/1.18 var(--album-sans);letter-spacing:-.04em;white-space:nowrap}
+.research-backtest-record p{margin:12px 0 0;font:12px/1.1 var(--album-sans);white-space:nowrap}
+.research-backtest-record p span,.research-contact-record p span,.research-receipt-record p span{margin:0 4px;color:#93bdc0}
+.research-record-tail{position:absolute;left:16px;right:16px;bottom:14px;border-top:1px dashed #e7ebe680;padding-top:6px;font:9px/1 var(--album-pixel);letter-spacing:.04em}
+.research-drop-pricing{left:26.7%;top:44%;width:24%;height:15%;z-index:2}
+.research-receipt-record{position:relative;width:100%;height:100%;padding:16px 17px 20px;transform:rotate(-7deg);background:#deded4 url('/album/paper.jpg') center/430px;color:#1d2421;box-shadow:5px 10px 18px #0008;overflow:hidden}
+.research-receipt-record::after{content:'';position:absolute;left:0;right:0;bottom:0;height:9px;background:linear-gradient(135deg,transparent 50%,#111617 51%) 0 0/13px 13px repeat-x}
+.research-receipt-record strong{display:block;margin-top:21px;font:650 clamp(18px,1.7vw,25px)/1.2 var(--album-sans);letter-spacing:-.045em;white-space:nowrap}
+.research-receipt-record p{margin:8px 0 0;font:12px/1.2 var(--album-sans);white-space:nowrap}
+.research-receipt-record p span{color:#527477}
+.research-receipt-rule{border-top:1px dashed #24302c8c;margin-top:14px}
+.research-receipt-record small{display:block;margin-top:7px;font:9px/1 var(--album-pixel);letter-spacing:.045em}
+.research-drop-tennis{left:27%;top:56%;width:34%;height:15%;z-index:4}
+.research-contact-record{position:relative;width:100%;height:100%;padding:10px 15px 11px;transform:rotate(-3.5deg);background:#353c39 url('/album/paper.jpg') center/500px;background-blend-mode:multiply;color:#eeeae1;border-top:3px solid #c9d3cb;border-bottom:3px solid #c9d3cb;box-shadow:7px 10px 18px #000b;overflow:hidden}
+.research-contact-perforation{position:absolute;top:0;bottom:0;left:3px;width:5px;background:repeating-linear-gradient(0deg,#151b19 0 8px,transparent 8px 15px)}
+.research-contact-record .research-record-head{border-color:#c7d4cc8c}
+.research-contact-record strong{display:block;margin-top:12px;font:650 clamp(18px,1.8vw,26px)/1.12 var(--album-sans);letter-spacing:-.045em;white-space:nowrap}
+.research-contact-record p{margin:6px 0 0;font:11px/1.1 var(--album-sans);white-space:nowrap}
+.research-contact-frame{position:absolute;right:10px;top:36px;display:flex;gap:2px;opacity:.42}
+.research-contact-frame i{display:grid;place-items:center;width:17px;height:24px;border:1px solid #f3f1e6;font:12px/1 var(--album-pixel);font-style:normal}
+.research-contact-frame i:nth-child(even){background:#eeeae1;color:#252e2a}
+.research-mobile-identifier{display:none}
+
+/* Kept behind the independent wordmark and character flights by the parent. */
+.research-scene-cover{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;background:#ebe9df;visibility:hidden;opacity:0}
+
+/* The selected track remains readable even when paper is behind the model. */
+.album-home .world-tab[data-world="research"].is-active .track-name{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.album-home .world-tab[data-world="research"].is-active .track-name small{display:block;font:12px/1.1 var(--album-pixel);letter-spacing:-.015em;opacity:1;color:var(--hero-accent)}
+
+/* The old left scrim would dim the only readable area during arrival. */
+.album-site[data-scene-phase=preview] .album-home:has(.album-scene-stack[data-research-transition=true])::before{display:none}
+
+/* A single continuation sheet follows the cover at narrow widths. */
+.research-continuation{display:none;position:relative;z-index:1;padding:42px clamp(18px,6vw,72px) 64px;background:#0e1112;color:#e9e9df;font-family:var(--album-sans);overflow:hidden}
+.research-continuation-label{display:flex;justify-content:space-between;gap:16px;max-width:960px;margin:0 auto 18px;border-bottom:1px solid #c1c7bd6b;padding-bottom:10px;font:11px/1.3 var(--album-pixel);letter-spacing:.055em}
+.research-continuation-paper{position:relative;max-width:960px;margin:0 auto;padding:34px clamp(24px,5vw,58px) 26px;background:#ebe9df url('/album/paper.jpg') center/760px;color:#1a211d;border:1px solid #f4f1e7;box-shadow:7px 8px 0 #a7aaa1,13px 14px 0 #424a45,20px 28px 36px #0009}
+.research-continuation-paper::before{content:'';position:absolute;inset:14px;border:1px solid #25302972;pointer-events:none}
+.research-continuation-holes{position:absolute;left:6px;top:14%;bottom:14%;display:flex;flex-direction:column;justify-content:space-between}
+.research-continuation-holes i{width:9px;height:9px;border-radius:50%;background:#111717}
+.research-continuation-head{display:flex;justify-content:space-between;gap:14px;border-bottom:3px solid #1c2420;padding-bottom:10px;font:12px/1.3 var(--album-pixel)}
+.research-continuation-head i{font-style:italic}
+.research-continuation-lead{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(210px,.8fr);gap:clamp(24px,4vw,52px);padding:28px 0 22px}
+.research-continuation-status{display:inline-block;margin:0!important;padding:8px 11px 7px;background:#17201c;color:#eef1e8;font:700 clamp(20px,2.7vw,29px)/1 var(--album-sans);letter-spacing:-.03em}
+.research-continuation-jcr{margin:9px 0 0!important;font:12px/1.4 var(--album-sans);color:#47544c}
+.research-continuation-lead h2{margin:25px 0 0;font:700 clamp(29px,4vw,43px)/1.2 var(--album-sans);letter-spacing:-.055em}
+.research-continuation-finding{margin:16px 0 0!important;font:600 clamp(16px,2vw,21px)/1.3 var(--album-sans)}
+.research-continuation-lead figure{align-self:start;margin:0;padding:6px;border:1px solid #252d28;background:#f4f1e7;transform:rotate(1.3deg);box-shadow:5px 7px 9px #0002}
+.research-continuation-lead img{display:block;width:100%;aspect-ratio:1.18;object-fit:cover;object-position:center 43%;filter:grayscale(1) contrast(1.2)}
+.research-continuation-lead figcaption{padding:7px 2px 2px;font:10px/1 var(--album-pixel)}
+.research-continuation-citation{border-top:1px solid #27332b72;padding:12px 0 26px;font:italic 14px/1.5 var(--album-sans)}
+.research-continuation-citation span{font:11px/1.5 var(--album-pixel);color:#48554c}
+.research-continuation-register{border-top:3px solid #1a211d;padding:9px 0 16px;font:11px/1.3 var(--album-pixel);letter-spacing:.08em}
+.research-continuation-entry{display:grid;grid-template-columns:130px minmax(0,1fr) auto;align-items:baseline;gap:22px;border-top:1px solid #29312b6e;padding:20px 0}
+.research-continuation-entry>span{font:11px/1.3 var(--album-pixel);color:#516159}
+.research-continuation-entry h3{margin:0;font:650 clamp(19px,2.25vw,25px)/1.35 var(--album-sans);letter-spacing:-.045em}
+.research-continuation-entry p{margin:0!important;font:13px/1.3 var(--album-sans);white-space:nowrap}
+.research-continuation-end{display:flex;justify-content:space-between;gap:16px;border-top:3px solid #1b231e;padding-top:11px;font:10px/1.4 var(--album-pixel)}
+
+@media(min-width:1200px){.research-continuation{display:none!important}}
+@media(max-width:1199px){
+ .research-continuation{display:block}
+ .research-drop-cities{left:29%;top:11%;width:66%;height:65%}
+ .research-paper-inner{padding:22px 23px 18px 33px}
+ .research-main-paper::before{inset:11px 12px 11px 22px}
+ .research-paper-head{font-size:9px}
+ .research-paper-reading{left:5.4%;top:15%;width:30%}
+ .research-paper-status{font-size:18px;padding:7px 8px 6px}
+ .research-paper-jcr{font-size:9px;white-space:normal}
+ .research-paper-reading h2{font-size:20px;line-height:1.24;margin-top:20px}
+ .research-paper-finding{font-size:13px;white-space:normal;margin-top:14px}
+ .research-paper-method{font-size:9px;white-space:normal}
+ .research-paper-photo{left:5%;right:auto;top:54%;width:36%;height:35%}
+ .research-paper-foot{font-size:9px;bottom:4%}
+ .research-paper-foot span:last-child{font-size:9px}
+ .research-drop-worldquant{left:77%;top:10%;width:21%;height:22%}
+ .research-backtest-record strong{font-size:17px}
+ .research-backtest-record p{font-size:10px}
+ .research-drop-pricing{display:none}
+ .research-receipt-record{padding:11px 12px 16px}
+ .research-receipt-record strong{font-size:16px;margin-top:15px}
+ .research-receipt-record p{font-size:10px}
+ .research-drop-tennis{display:none}
+ .research-contact-record strong{font-size:15px;margin-top:8px}
+ .research-contact-record p{font-size:9px}
+ .research-contact-frame{display:none}
+}
+@media(max-width:700px){
+ .album-home .world-tab[data-world="research"].is-active .track-name{min-width:0;gap:1px}
+ .album-home .world-tab[data-world="research"].is-active .track-name small{max-width:80px;font-size:9px;line-height:1.04;white-space:normal}
+ .research-dossier-ground{background:#0c1010}
+ .research-dossier-ground::before{inset:205px 12px auto;height:470px}
+ .research-dossier-ground::after,.research-dossier-register{display:none}
+ .research-dossier-index{display:none}
+ .research-drop-cities{left:-6%;top:228px;width:108%;height:420px}
+ .research-main-paper{transform:rotate(3deg);box-shadow:3px 4px 0 #b9bbb2,7px 8px 0 #6a6d68,10px 16px 18px #0008}
+ .research-main-paper::before{inset:8px}
+ .research-binder-holes{left:3px}.research-binder-holes i{width:7px;height:7px}
+ .research-paper-inner{padding:15px 14px 18px 22px}
+ .research-paper-head{font-size:9px}
+ .research-paper-reading{display:none}
+ .research-paper-photo{top:12%;left:auto;right:1%;width:56%;height:57%;border-width:4px}
+ .research-paper-photo figcaption{font-size:7px}
+ .research-paper-foot{display:none}
+ .research-drop-worldquant,.research-drop-tennis,.research-drop-pricing{display:none}
+ .research-mobile-identifier{position:absolute;z-index:2;left:5%;right:5%;top:182px;height:27px;display:flex;align-items:center;justify-content:space-between;gap:7px;padding:3px 8px 2px;background:#ebe9df;color:#171b1a;box-shadow:4px 4px 0 #0b1111;font-family:var(--album-sans)}
+ .research-mobile-identifier strong{font-size:14px;line-height:1.1;letter-spacing:-.035em;white-space:nowrap}
+ .research-mobile-identifier span{flex:none;border-left:1px solid #66736b;padding-left:7px;font-size:11px;line-height:1.1;font-weight:700;white-space:nowrap}
+ .research-mobile-identifier i{display:none}
+ .research-continuation{padding:34px 18px 48px}
+ .research-continuation-label{font-size:9px}
+ .research-continuation-paper{padding:23px 25px 21px}
+ .research-continuation-paper::before{inset:8px}
+ .research-continuation-head{font-size:10px;gap:6px}
+ .research-continuation-head span:last-child{font-size:9px;text-align:right}
+ .research-continuation-lead{display:flex;flex-direction:column;gap:24px;padding:22px 0 16px}
+ .research-continuation-status{font-size:19px}
+ .research-continuation-jcr{font-size:11px}
+ .research-continuation-lead h2{font-size:clamp(26px,7.2vw,34px);margin-top:19px}
+ .research-continuation-finding{font-size:16px}
+ .research-continuation-lead figure{width:88%;align-self:center}
+ .research-continuation-lead img{aspect-ratio:1.55}
+ .research-continuation-citation{font-size:12px}
+ .research-continuation-citation span{font-size:10px}
+ .research-continuation-entry{grid-template-columns:1fr;gap:4px;padding:15px 0}
+ .research-continuation-entry>span{font-size:9px}
+ .research-continuation-entry h3{font-size:19px}
+ .research-continuation-entry p{font-size:12px}
+ .research-continuation-end{flex-direction:column;gap:3px;font-size:9px}
+}
+@media(max-width:360px){.research-mobile-identifier strong{font-size:12px}.research-mobile-identifier span{font-size:10px}}

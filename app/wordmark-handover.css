@@ -1,0 +1,28 @@
+/* Matching hero/next-surface wordmarks. Masthead is real content, not a pinned screen. */
+.home-surface{position:relative;z-index:0}
+.cover-pin,.cover-art{position:relative}
+.album-stage{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.album-character-flight,.album-wordmark-flight,.album-scene-hold{position:absolute;inset:0;pointer-events:none}
+.album-character-flight{z-index:4}.album-wordmark-flight{z-index:2}.album-scene-hold{z-index:0}
+/* The white source inverts against each pixel of the research papers and bench.
+   Blend the flight as a whole: its scene sibling is the backdrop, while the
+   character and dialogue remain in higher, independent layers. */
+.world-research .album-home .album-wordmark-flight{mix-blend-mode:difference}
+.world-research .album-home [data-wordmark-source]{color:#fff}
+.publication-masthead{position:relative;isolation:isolate;overflow:clip;height:min(22vw,23svh);background:#edeade;color:#20271f;pointer-events:none}
+.publication-masthead::before{content:'';position:absolute;inset:0;z-index:-1;background:url('/album/paper.jpg') center/620px;mix-blend-mode:multiply;opacity:.16}
+.publication-masthead [data-wordmark-target]{left:18px;right:18px;top:0;bottom:auto;height:100%;max-height:none;color:#20271f;z-index:0;pointer-events:none}
+.home-surface>.experience-ribbon{position:relative;z-index:1}
+@media(max-width:700px){
+ .album-site{--handover-wordmark-height:max(135px,calc(31.464vw + 12px))}
+ .album-home.hero-lobby{height:calc(145vw + 375px + var(--handover-wordmark-height))}
+ .album-home .selector-block{padding-top:calc(145vw + 30px)}
+ .world-experience .album-home .selector-block{padding-top:calc(145vw + 379px)}
+ .world-experience .album-home.hero-lobby{height:auto;padding-bottom:calc(70px + var(--handover-wordmark-height))}
+ .album-home .album-wordmark,.world-experience .album-home .album-wordmark{top:auto;bottom:18px;height:var(--handover-wordmark-height)}
+ .publication-masthead{height:var(--handover-wordmark-height)}
+ .publication-masthead::before{background-size:390px auto}
+ .publication-masthead [data-wordmark-target]{left:12px;right:12px;height:var(--handover-wordmark-height);top:0;bottom:auto}
+}
+@media(forced-colors:active){.publication-masthead{background:Canvas}.publication-masthead [data-wordmark-target]{color:CanvasText}.world-research .album-home .album-wordmark-flight{mix-blend-mode:normal}.world-research .album-home .wordmark-ink{color:CanvasText!important}}
+@media print{.publication-masthead{display:none}}
