@@ -2,7 +2,6 @@
 
 import { useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import gsap from 'gsap';
-import { profile } from '../content/site';
 import { experienceCategories, experienceDesktop } from '../content/experience-desktop';
 import { PixelIcon, type ExperienceIcon } from './experience-icons';
 
@@ -92,9 +91,9 @@ export function ExperienceDesktop({ reducedMotion, active, animateEntrance }: Pr
       </div>
       <div className="exp-note-status" aria-hidden="true"><span>我的经历</span><span>UTF-8</span></div>
     </Window>
-    <Window kind="browser" title="个人主页" icon="globe">
-      <div className="exp-browser-strip" aria-hidden="true"><span>个人主页</span><span>欢迎来访</span><PixelIcon name="globe"/></div>
-      <div className="exp-browser-page"><p>{profile.englishName}</p><h3>{profile.name}</h3><span>{profile.identity}</span><div className="exp-browser-watermark" aria-hidden="true"><PixelIcon name="globe"/></div></div>
+    <Window kind="browser" title="经历速览" icon="globe">
+      <div className="exp-browser-strip" aria-hidden="true"><span>教育 {experienceDesktop.records.education.length} 项</span><span>实习 {experienceDesktop.records.internship.length} 项</span><PixelIcon name="globe"/></div>
+      <div className="exp-browser-page"><p>EXPERIENCE</p><h3>{experienceDesktop.records.education[0].label}</h3><span>{experienceDesktop.records.internship[0].label}</span><div className="exp-browser-watermark" aria-hidden="true"><PixelIcon name="globe"/></div></div>
     </Window>
     <Window kind="photo" title="图片查看器" icon="image">
       <div className="exp-viewer-mat"><PhotoSlot/></div>
