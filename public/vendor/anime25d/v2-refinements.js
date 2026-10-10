@@ -1,5 +1,10 @@
 /** Original v2 pixel partitions, not regenerated character art. Adapter code: MIT. */
 export const V2_MODEL_ID='59bd5a-29e0bf61-7f2cd949';
+// This revision changes only neck/chest RGB; the same arm/hair refinements apply.
+export const V2_NECK_REPAIR_MODEL_ID='2a8449-ebedfed1-b2d9b71b';
+export function isV2Model(modelId) {
+  return modelId===V2_MODEL_ID || modelId===V2_NECK_REPAIR_MODEL_ID;
+}
 /** Merge only adjacent, equally configured source partitions AFTER settings validation.
  * Copy nontransparent original pixels once; transparent crop padding must not erase a neighbour.
  */

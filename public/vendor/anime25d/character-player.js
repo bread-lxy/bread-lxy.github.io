@@ -10,7 +10,7 @@ import './vendor/genericparts.js';
 import { defaultParams, parameterRanges, normalizeParams } from './params.js';
 import { createAccessorySpring, resetAccessorySpring, advanceAccessorySpring, accessoryVertexDelta } from './accessory-spring.js';
 import { closedEyeY, closedMouthPoint, neckBlend } from './feature-deformation.js';
-import { V2_MODEL_ID, refineV2Rig, continuousV2Hair, hairRootWeight, armPoint } from './v2-refinements.js';
+import { isV2Model, refineV2Rig, continuousV2Hair, hairRootWeight, armPoint } from './v2-refinements.js';
 export { defaultParams, parameterRanges, expressionPresets, blinkAt } from './params.js';
 const Rigger = globalThis.Rigger, RT = globalThis.RigRuntime;
 function sameOriginUrl(value) {
@@ -54,7 +54,7 @@ export async function createCharacterPlayer({canvas:cv, psdUrl, settingsUrl, sig
     rig = (await parseRig(buffer,signal,fallback,onProgress)).rig;
   }
   const settings = settingsUrl ? await fetchAsset(settingsUrl,signal,'json') : null;
-  if(modelId===V2_MODEL_ID)rig=refineV2Rig(rig);
+  if(isV2Model(modelId))rig=refineV2Rig(rig);
   if(signal?.aborted) throw signal.reason || new DOMException('Aborted','AbortError');
   const gl = cv.getContext('webgl',{alpha:true,stencil:true,antialias:true,premultipliedAlpha:true});
   if(!gl) throw new Error('WebGL is unavailable');
@@ -368,7 +368,7 @@ function render(e){
     layers=rig.layers.map(L=>({visible:true,opacity:1,...L,id:String(L.z)+':'+L.name}));
     if(settings) applySettings(settings);
     applyOverrides();
-    if(modelId===V2_MODEL_ID){
+    if(isV2Model(modelId)){
       const merged=continuousV2Hair(layers);
       if(merged===layers)rigInfo.warnings.push('Back-hair merge skipped: incompatible layer settings or pixel overlap');
       layers=merged;

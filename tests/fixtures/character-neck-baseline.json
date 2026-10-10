@@ -1,0 +1,425 @@
+{
+  "schema": 1,
+  "originalPsdSha256": "d3dbbe4880034d9544cdba4011179e372d8b580f2f35c87f98364450e118e4d0",
+  "modelId": "59bd5a-29e0bf61-7f2cd949",
+  "edits": {
+    "neck": [
+      497,
+      327,
+      557,
+      341
+    ],
+    "topwear": [
+      486,
+      309,
+      573,
+      365
+    ]
+  },
+  "compositeRect": [
+    486,
+    309,
+    573,
+    365
+  ],
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchors": {
+    "face": {
+      "cx": 499.16706037489365,
+      "cy": 189.78229063169059,
+      "x0": 396,
+      "x1": 593,
+      "y0": 96,
+      "y1": 298
+    },
+    "eyeL": {
+      "x0": 426,
+      "x1": 475,
+      "y0": 197,
+      "y1": 247,
+      "icx": 456.12697382351615,
+      "icy": 222.05175591756543,
+      "closeY": 228
+    },
+    "eyeR": {
+      "x0": 519,
+      "x1": 572,
+      "y0": 177,
+      "y1": 227,
+      "icx": 545.8883887566941,
+      "icy": 201.48006961267208,
+      "closeY": 208
+    },
+    "mouth": {
+      "x0": 491,
+      "x1": 524,
+      "y0": 250,
+      "y1": 282,
+      "cx": 510.0787208548827,
+      "cy": 265.38661678220785
+    },
+    "neckPivot": {
+      "cx": 524.6174721103794,
+      "cy": 324.4
+    },
+    "neckTop": 236,
+    "neckBottom": 340,
+    "bodyPivot": {
+      "cx": 524.6174721103794,
+      "cy": 1024
+    },
+    "faceScale": 0.5915915915915916,
+    "hairRootY": 156
+  },
+  "layers": [
+    {
+      "name": "topwear_1",
+      "bounds": [
+        98,
+        299,
+        350,
+        719
+      ],
+      "width": 252,
+      "height": 420,
+      "alphaSha256": "d7d0ba3dce4ad9d14d8ecec79cd1c96c6b853e9ecdb67a3c5b8ae4110c5fb0da",
+      "rgbaSha256": "a7d4cec49e302887a05a4312ae8815d6a69ceb6fef165a019d3c61cf5aceeb85",
+      "outsideSha256": "a7d4cec49e302887a05a4312ae8815d6a69ceb6fef165a019d3c61cf5aceeb85",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "topwear_2",
+      "bounds": [
+        671,
+        313,
+        968,
+        696
+      ],
+      "width": 297,
+      "height": 383,
+      "alphaSha256": "8987c082ad3668b309827ac6f551cf34b67c217f45160f43fa77f4a633932fb9",
+      "rgbaSha256": "9e5e1b7b3669ef7428e1e41635ae4ed3e26dff8258b6d6f7f36510610ec981c5",
+      "outsideSha256": "9e5e1b7b3669ef7428e1e41635ae4ed3e26dff8258b6d6f7f36510610ec981c5",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "back hair",
+      "bounds": [
+        332,
+        2,
+        700,
+        226
+      ],
+      "width": 368,
+      "height": 224,
+      "alphaSha256": "401dccb7500d7177bb2c67bb962f32414acd3773455facdbc42b9659d57c68df",
+      "rgbaSha256": "28e5ebbd6cc5dde6f2f1cda5b4336308f6584009b76e94a7d3e873765528f8af",
+      "outsideSha256": "28e5ebbd6cc5dde6f2f1cda5b4336308f6584009b76e94a7d3e873765528f8af",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "back hair_1",
+      "bounds": [
+        191,
+        226,
+        512,
+        667
+      ],
+      "width": 321,
+      "height": 441,
+      "alphaSha256": "42c248819c17b79a8d8a9ef4a1587e104226005ac5e4967e36c7f86cf37a7104",
+      "rgbaSha256": "9e89cfbafd7b52e9079bc004989f17ee939b85141e1422291aa1a51f8bc41da1",
+      "outsideSha256": "9e89cfbafd7b52e9079bc004989f17ee939b85141e1422291aa1a51f8bc41da1",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "back hair_2",
+      "bounds": [
+        512,
+        216,
+        838,
+        623
+      ],
+      "width": 326,
+      "height": 407,
+      "alphaSha256": "8e5336bbbbcbfa83d884b5d35217ba2c29bf3d905aaee41ac1de581157f669f7",
+      "rgbaSha256": "927280c97127d3dedde87bc8c907b0d4d9e55bfcb38b78e36f3eeea7ca0ebeef",
+      "outsideSha256": "927280c97127d3dedde87bc8c907b0d4d9e55bfcb38b78e36f3eeea7ca0ebeef",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "legwear",
+      "bounds": [
+        323,
+        751,
+        667,
+        1024
+      ],
+      "width": 344,
+      "height": 273,
+      "alphaSha256": "1a6f12626d7b6dd1fb8923c1ffb68b0a44a5a62b10d128e6ede6770e6938c79e",
+      "rgbaSha256": "4ba2426dd092ac63173e8cb0c91aa5bc371cf58ccbffcea22e08469ad08e805d",
+      "outsideSha256": "4ba2426dd092ac63173e8cb0c91aa5bc371cf58ccbffcea22e08469ad08e805d",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "bottomwear",
+      "bounds": [
+        267,
+        758,
+        683,
+        924
+      ],
+      "width": 416,
+      "height": 166,
+      "alphaSha256": "36fa6bef69c42c7634c3698e190556ee2ecdc29c415dc2d18cafb3b13adf6fc4",
+      "rgbaSha256": "35341a5dfd7086852c70fae7dacf1264b2fbdfe28e9d001332f3a9850dd81a1c",
+      "outsideSha256": "35341a5dfd7086852c70fae7dacf1264b2fbdfe28e9d001332f3a9850dd81a1c",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "topwear",
+      "bounds": [
+        284,
+        294,
+        692,
+        846
+      ],
+      "width": 408,
+      "height": 552,
+      "alphaSha256": "96192c224009cdecbee21f9d6b2c0ab52b63ff3c95a58dd62d9aba4fd2ce380a",
+      "rgbaSha256": "778aaabbdfc1e94d315397350287f045102b783df263c52c841e371cb640eda7",
+      "outsideSha256": "a59d32676a631a61a3cb0e558751c25598781d84ad285b4cd558514d70aa785a",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "neck",
+      "bounds": [
+        492,
+        235,
+        559,
+        341
+      ],
+      "width": 67,
+      "height": 106,
+      "alphaSha256": "8b824256a5151054b6899da5fab06600b6ce82b2700aea2fc73522df2c805444",
+      "rgbaSha256": "a88e5ef8fa35e2e60c41acad0c75decb335b4f591a4f55701b51ef0f2eb84db0",
+      "outsideSha256": "679a35290c0646731935be9d9a0432cbb5d97e24e354d8b8c2fc409fcb930ade",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "handwear",
+      "bounds": [
+        260,
+        335,
+        870,
+        963
+      ],
+      "width": 610,
+      "height": 628,
+      "alphaSha256": "0f452b47f4f862d705d775dcc56ee9986d28889a924ef0d75b9a463c54b9697c",
+      "rgbaSha256": "b95f575aa4b086b9c997a8b49f80d084cc1193c934f1adb638f6c3543a24f71c",
+      "outsideSha256": "b95f575aa4b086b9c997a8b49f80d084cc1193c934f1adb638f6c3543a24f71c",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "ears",
+      "bounds": [
+        410,
+        177,
+        624,
+        267
+      ],
+      "width": 214,
+      "height": 90,
+      "alphaSha256": "5e294c6763d659558e912910e17facc4973c25816709d5e239c02731555a08d5",
+      "rgbaSha256": "d6fca29d689af5065c42df7c0a2af1e813216848faec2ba267d757c261afc035",
+      "outsideSha256": "d6fca29d689af5065c42df7c0a2af1e813216848faec2ba267d757c261afc035",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "face",
+      "bounds": [
+        396,
+        96,
+        595,
+        299
+      ],
+      "width": 199,
+      "height": 203,
+      "alphaSha256": "1778d81b19b93c1bd89bea142a81097b1613c70dbdcd7647fd65a35a8aea9c37",
+      "rgbaSha256": "4ba957637fde25f7bf7b053fccd8cc853c12594818c67e9bce3170200b4451af",
+      "outsideSha256": "4ba957637fde25f7bf7b053fccd8cc853c12594818c67e9bce3170200b4451af",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "nose",
+      "bounds": [
+        489,
+        241,
+        495,
+        247
+      ],
+      "width": 6,
+      "height": 6,
+      "alphaSha256": "92b427b952cc196ae4d4dfcd01f7e05217bb44f3e6aa064aa299309f34c62c65",
+      "rgbaSha256": "2df17211dcd77270e0f6b717750956567116f98c0604b031b4aab47c6b08c93e",
+      "outsideSha256": "2df17211dcd77270e0f6b717750956567116f98c0604b031b4aab47c6b08c93e",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "mouth",
+      "bounds": [
+        491,
+        250,
+        525,
+        283
+      ],
+      "width": 34,
+      "height": 33,
+      "alphaSha256": "9b3d7d449061fa0061ba063a08b28f14be3833e3cacf560347065cbb3e0ed7a0",
+      "rgbaSha256": "d5c42d0bb45e0c1bdb1f1df751e9eb5192b1c9b8c63c4ba5db4ab72f04930fcf",
+      "outsideSha256": "d5c42d0bb45e0c1bdb1f1df751e9eb5192b1c9b8c63c4ba5db4ab72f04930fcf",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "eyewhite",
+      "bounds": [
+        426,
+        177,
+        573,
+        248
+      ],
+      "width": 147,
+      "height": 71,
+      "alphaSha256": "b08cc40bee7dbc72ea20e38d47597eb64bbde688542a21ebd7314461a7a769a2",
+      "rgbaSha256": "46150465ca327f207bc2f14c8016124452a8d3e85c48902eab2afdd36ca0edc8",
+      "outsideSha256": "46150465ca327f207bc2f14c8016124452a8d3e85c48902eab2afdd36ca0edc8",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "irides",
+      "bounds": [
+        438,
+        176,
+        565,
+        247
+      ],
+      "width": 127,
+      "height": 71,
+      "alphaSha256": "6a4ea480e1c504a4e9600fcb6790767e1ab021ae4998736896914ab7a7507e31",
+      "rgbaSha256": "89a26d6f32c905278318e91afe9d7e4bdf73a515b7870796b39049dfcacb9062",
+      "outsideSha256": "89a26d6f32c905278318e91afe9d7e4bdf73a515b7870796b39049dfcacb9062",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "eyebrow",
+      "bounds": [
+        409,
+        139,
+        562,
+        181
+      ],
+      "width": 153,
+      "height": 42,
+      "alphaSha256": "6f6ce9dc5fc4fc74c3ad703949e695af9cc0a9632ec8deb3e5a5ee7855ace2ea",
+      "rgbaSha256": "9fd2345252fdacc78012f795fa45ea85bb022734803cae0c893d3962562083f4",
+      "outsideSha256": "9fd2345252fdacc78012f795fa45ea85bb022734803cae0c893d3962562083f4",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "eyelash",
+      "bounds": [
+        407,
+        165,
+        587,
+        250
+      ],
+      "width": 180,
+      "height": 85,
+      "alphaSha256": "5e6a87516553eec09f2c461b2a86fca63c5719bf5d4051cfd85cfab687ae7911",
+      "rgbaSha256": "43cc3c377d26dc9c157f204fb87f1cd6afcf33a4491ceb2e800c0be8a872324f",
+      "outsideSha256": "43cc3c377d26dc9c157f204fb87f1cd6afcf33a4491ceb2e800c0be8a872324f",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    },
+    {
+      "name": "front hair",
+      "bounds": [
+        379,
+        43,
+        608,
+        331
+      ],
+      "width": 229,
+      "height": 288,
+      "alphaSha256": "4dd2d0dc136d40c5f68e8d1d85e877903c34953516e359a50f9201a066941b65",
+      "rgbaSha256": "1dbeab25014b1a6768af21cc62f4f7d2c753dde5a44396e7ffbd684c1044bf54",
+      "outsideSha256": "1dbeab25014b1a6768af21cc62f4f7d2c753dde5a44396e7ffbd684c1044bf54",
+      "opacity": 1,
+      "blendMode": "normal",
+      "hidden": false,
+      "clipping": false
+    }
+  ],
+  "poster": {
+    "alphaSha256": "d978384d45a49ff8bd74984c77e3dc118ca253d7e9c184e3fa40e214f0cc3418",
+    "outsideSha256": "a0ef7db84aa4c0988e55f8a7c4573bfeaafb116e410222112bcd2021becc8640"
+  }
+}
